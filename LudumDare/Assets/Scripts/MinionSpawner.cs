@@ -29,7 +29,10 @@ public class MinionSpawner : MonoBehaviour {
     {
         SpawnStats sStats = spawners[Random.Range(0, spawners.Length)];
         GameObject obj = (GameObject)Instantiate(minions[Random.Range(0, minions.Length)], sStats.transform.position, new Quaternion());
-        obj.GetComponent<MinionStats>().direction = sStats.direction;
+        MinionStats mStats = obj.GetComponent<MinionStats>();
+        mStats.direction = sStats.direction;
+        mStats.setGoalDown();
+
     }
 
 

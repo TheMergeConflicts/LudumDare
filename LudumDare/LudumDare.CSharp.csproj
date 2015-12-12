@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Destroyer.cs" />
     <Compile Include="Assets\Scripts\MinionMovement.cs" />
     <Compile Include="Assets\Scripts\MinionSpawner.cs" />
     <Compile Include="Assets\Scripts\MinionStats.cs" />

@@ -18,11 +18,9 @@ public class MinionMovement : MonoBehaviour {
     void Update()
     {
         rigid.velocity = stats.direction * speed + Vector2.up * rigid.velocity.y;
-        RaycastHit2D hit;
         Debug.DrawLine(checkJumpOrigin.position, checkJumpOrigin.position + new Vector3(stats.direction.x, stats.direction.y, 0));
         if (Physics2D.Raycast(checkJumpOrigin.position, stats.direction, 1f, 1))
         {
-            print("I am legend");
             jump();
         }
 
@@ -31,5 +29,6 @@ public class MinionMovement : MonoBehaviour {
     void jump()
     {
         rigid.AddForce(Vector2.up * jumpForce);
+        gameObject.layer = 1;
     }
 }
