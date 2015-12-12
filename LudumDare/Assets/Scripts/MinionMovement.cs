@@ -2,6 +2,10 @@
 using System.Collections;
 
 public class MinionMovement : MonoBehaviour {
+    public float jumpForce = 50;
+    public float speed;
+    public Transform checkJumpOrigin;
+
     Rigidbody2D rigid;
     MinionStats stats;
 
@@ -13,9 +17,19 @@ public class MinionMovement : MonoBehaviour {
 
     void Update()
     {
-        rigid.velocity = stats.direction * stats.speed + Vector2.up * rigid.velocity.y;
+        rigid.velocity = stats.direction * speed + Vector2.up * rigid.velocity.y;
+        RaycastHit2D hit;
+        Debug.DrawLine(checkJumpOrigin.position, checkJumpOrigin.position + new Vector3(stats.direction.x, stats.direction.y, 0));
+        if (Physics2D.Raycast(checkJumpOrigin.position, stats.direction, 1f, 1))
+        {
+            print("I am legend");
+            jump();
+        }
 
     }
 
-
+    void jump()
+    {
+        rigid.AddForce(Vector2.up * jumpForce);
+    }
 }
