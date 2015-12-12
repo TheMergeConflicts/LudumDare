@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\MinionSpawner.cs" />
     <Compile Include="Assets\Scripts\MinionStats.cs" />
     <Compile Include="Assets\Scripts\PlatformManagement.cs" />
+    <Compile Include="Assets\Scripts\SpawnStats.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

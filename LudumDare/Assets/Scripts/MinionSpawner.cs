@@ -3,10 +3,10 @@ using System.Collections;
 
 public class MinionSpawner : MonoBehaviour {
     public GameObject[] minions;
+    public SpawnStats[] spawners;
     public float respawnTimeMin;
     public float respawnTimeMax;
-    public Vector2 direction;
-
+   
     float respawnTimer;
     
     void Start()
@@ -27,8 +27,9 @@ public class MinionSpawner : MonoBehaviour {
 
     void createMinion()
     {
-        GameObject obj = (GameObject)Instantiate(minions[Random.Range(0, minions.Length)], transform.position, new Quaternion());
-        obj.GetComponent<MinionStats>().direction = direction;
+        SpawnStats sStats = spawners[Random.Range(0, spawners.Length)];
+        GameObject obj = (GameObject)Instantiate(minions[Random.Range(0, minions.Length)], sStats.transform.position, new Quaternion());
+        obj.GetComponent<MinionStats>().direction = sStats.direction;
     }
 
 
