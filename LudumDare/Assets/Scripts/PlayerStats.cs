@@ -37,9 +37,9 @@ public class PlayerStats : MonoBehaviour {
     public void updateHealth(float health)
     {
         this.health += health;
-        if (this.health > 100)
+        if (this.health > maxHealth)
         {
-            this.health = 100;
+            this.health = maxHealth;
         }
     }
 }
