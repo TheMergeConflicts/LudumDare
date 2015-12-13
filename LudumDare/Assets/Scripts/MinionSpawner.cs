@@ -35,6 +35,20 @@ public class MinionSpawner : MonoBehaviour {
 
     }
 
+    public void increaseSpawnRate()
+    {
+        respawnTimeMax -= .05f;
+        respawnTimeMin -= .05f;
+        if (respawnTimeMin < 1)
+        {
+            respawnTimeMin = 1;
+        }
+        if (respawnTimeMax < 2)
+        {
+            respawnTimeMax = 2;
+        }
+    }
+
 
     void restartTimer()
     {
