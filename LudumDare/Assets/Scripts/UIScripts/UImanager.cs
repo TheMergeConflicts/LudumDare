@@ -13,7 +13,7 @@ public class UImanager : MonoBehaviour {
 	public GameObject creditsPanel;
 	public GameObject mainMenuPanel;
 
-    PlayerStats playerStats;
+	PlayerStats playerStats;
 	Animator leftTutorialAnim;
 	Animator rightTutorialAnim;
 	bool leftSet;
@@ -81,6 +81,9 @@ public class UImanager : MonoBehaviour {
 			}
 
 			if(rightSet && leftSet){
+				ResetGame ();
+				rightSet = false;
+				leftSet = false;
 				Invoke ("StartGame", leftTutorialAnim.GetCurrentAnimatorClipInfo(0).Length);
 			}
 		}
@@ -114,4 +117,10 @@ public class UImanager : MonoBehaviour {
 		creditsPanel.SetActive (state);
 	}
 		
+	public void ResetGame(){
+		GameObject[] minions = GameObject.FindGameObjectsWithTag ("Minion");
+		foreach(GameObject minion in minions){
+			Destroy (minion);
+		}
+	}
 }

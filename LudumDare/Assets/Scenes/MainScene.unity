@@ -1024,6 +1024,7 @@ MonoBehaviour:
   age: 18
   health: 100
   yearTime: 5
+  UImanager: {fileID: 1404258500}
 --- !u!4 &317407757
 Transform:
   m_ObjectHideFlags: 0

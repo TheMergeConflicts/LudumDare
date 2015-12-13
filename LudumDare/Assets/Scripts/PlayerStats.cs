@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour {
     public float health;
     public float yearTime = 5;
 
+	public UImanager UImanager;
 
     float maxHealth;
     float ageTimer;
@@ -22,8 +23,10 @@ public class PlayerStats : MonoBehaviour {
     void Update()
     {
         //print(health);
-        health = Mathf.MoveTowards(health, 0, Time.deltaTime * deteriationRate);
-        updateAge();
+		if(UImanager.currentState == UImanager.UIState.inGame){
+			health = Mathf.MoveTowards(health, 0, Time.deltaTime * deteriationRate);
+			updateAge();
+		}
     }
 
     void updateAge ()
