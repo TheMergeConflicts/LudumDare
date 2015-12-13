@@ -10,7 +10,7 @@ public class MinionStats : MonoBehaviour {
 
     void Start()
     {
-        arrowThought.flipY = goalDown;
+        //arrowThought.flipY = goalDown;
     }
 
     void Update()
