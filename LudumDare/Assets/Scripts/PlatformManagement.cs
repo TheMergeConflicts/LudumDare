@@ -8,6 +8,7 @@ public class PlatformManagement : MonoBehaviour {
     public Transform[] ropeTransforms;
     public Transform[] ropePositions;
     public float ropeSpeed = 15;
+    public bool isMobile;
 
     int[] currentPositions;
     bool[] moveUp;
@@ -16,14 +17,35 @@ public class PlatformManagement : MonoBehaviour {
     {
         moveUp = new bool[ropeTransforms.Length];
         currentPositions = new int[ropePositions.Length];
+        isMobile = Application.isMobilePlatform;
 
     }
 
     void Update()
     {	
-		UpdateMobileInput ();
-		updateRopePosition(LEFT);
+        if (isMobile)
+        {
+            UpdateMobileInput();
+
+        }
+        else
+        {
+            updateInput();
+        }
+        updateRopePosition(LEFT);
         updateRopePosition(RIGHT);
+    }
+
+    void updateInput()
+    {
+        if (Input.GetButtonDown("LeftButton"))
+        {
+            moveRope(LEFT);
+        }
+        if (Input.GetButtonDown("RightButton"))
+        {
+            moveRope(RIGHT);
+        }
     }
 
 	void UpdateMobileInput(){
