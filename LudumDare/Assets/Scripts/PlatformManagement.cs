@@ -20,19 +20,29 @@ public class PlatformManagement : MonoBehaviour {
     }
 
     void Update()
-    {
-        if (Input.GetButtonDown("LeftButton"))
-        {
-            moveRope(LEFT);
-        }
-        if (Input.GetButtonDown("RightButton"))
-        {
-            moveRope(RIGHT);
-        }
-
+    {	
+		UpdateMobileInput ();
+		updateRopePosition(LEFT);
         updateRopePosition(RIGHT);
-        updateRopePosition(LEFT);
     }
+
+	void UpdateMobileInput(){
+		foreach(Touch touch in Input.touches){
+			if(touch.phase == TouchPhase.Ended){
+
+				//Left Touch
+				if (touch.position.x < Screen.width / 2f) {
+					moveRope(LEFT);
+					Debug.Log("left end");
+				}
+				//Right Touch
+				else {
+					moveRope(RIGHT);
+					Debug.Log("right end");
+				}
+			}
+		}
+	}
 
     void updateRopePosition(int id)
     {
