@@ -29,6 +29,6 @@ public class MinionMovement : MonoBehaviour {
     void jump()
     {
         rigid.AddForce(Vector2.up * jumpForce);
-        gameObject.layer = 1;
+        //gameObject.layer = 1;
     }
 }
