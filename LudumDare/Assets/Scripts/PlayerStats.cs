@@ -21,7 +21,7 @@ public class PlayerStats : MonoBehaviour {
 
     void Update()
     {
-        print(health);
+        //print(health);
         health = Mathf.MoveTowards(health, 0, Time.deltaTime * deteriationRate);
         updateAge();
     }

@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\MinionSpawner.cs" />
      <Compile Include="Assets\Scripts\MinionStats.cs" />
      <Compile Include="Assets\Scripts\PlatformManagement.cs" />
+     <Compile Include="Assets\Scripts\PlatformScoring.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\SpawnStats.cs" />
      <Compile Include="Assets\Scripts\UIScripts\UImanager.cs" />

@@ -9,6 +9,7 @@ public class UImanager : MonoBehaviour {
 	public Text ageText;
     public Slider healthBar;
 
+	public GameObject inGamePanel;
 	public GameObject creditsPanel;
 	public GameObject mainMenuPanel;
 
@@ -39,8 +40,7 @@ public class UImanager : MonoBehaviour {
 	}
 
 	void SetInGameUI(bool state){
-		ageText.gameObject.SetActive (state);
-		healthBar.gameObject.SetActive (state);
+		inGamePanel.SetActive (state);
 	}
 
 	void SetMainMenuUI(bool state){
