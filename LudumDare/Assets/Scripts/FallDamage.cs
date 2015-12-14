@@ -5,6 +5,7 @@ public class FallDamage : MonoBehaviour {
     public float lethalHeight;
     public Vector3 positionBeforeFall;
     public float timeBeforeDestroy = 3;
+    Rigidbody2D rigid;
     bool hasFallen;
     Animator anim;
     MinionMovement movement;
@@ -13,6 +14,7 @@ public class FallDamage : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
         movement = GetComponent<MinionMovement>();
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -42,6 +44,8 @@ public class FallDamage : MonoBehaviour {
             hasFallen = true;
             anim.SetTrigger("Fall");
             movement.speed = 0;
+            rigid.isKinematic = true;
+
         }
     }
 
