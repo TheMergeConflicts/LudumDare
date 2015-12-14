@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\SpawnStats.cs" />
     <Compile Include="Assets\Scripts\UIScripts\UImanager.cs" />
+    <Compile Include="Assets\Scripts\VictoryHandler.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
