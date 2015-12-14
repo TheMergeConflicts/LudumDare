@@ -8,7 +8,7 @@ public class MinionMovement : MonoBehaviour {
 
     Rigidbody2D rigid;
     MinionStats stats;
-
+    bool inAir;
     void Start()
     {
         stats = GetComponent<MinionStats>();
@@ -19,7 +19,8 @@ public class MinionMovement : MonoBehaviour {
     {
         rigid.velocity = stats.direction * speed + Vector2.up * rigid.velocity.y;
         Debug.DrawLine(checkJumpOrigin.position, checkJumpOrigin.position + new Vector3(stats.direction.x, stats.direction.y, 0));
-        if (Physics2D.Raycast(checkJumpOrigin.position, stats.direction, 1f, 1))
+       // print(Physics2D.Raycast(checkJumpOrigin.position, stats.direction, 1f, 1 << LayerMask.NameToLayer("SquishPlatform")));
+        if (Physics2D.Raycast(checkJumpOrigin.position, stats.direction, 1f, 1 << LayerMask.NameToLayer("SquishPlatform")))
         {
             jump();
         }
@@ -28,7 +29,13 @@ public class MinionMovement : MonoBehaviour {
 
     void jump()
     {
-        rigid.AddForce(Vector2.up * jumpForce);
+
+        if (!inAir)
+        {
+            rigid.AddForce(Vector2.up * jumpForce);
+            inAir = true;
+        }
+        
         //gameObject.layer = 1;
     }
 }

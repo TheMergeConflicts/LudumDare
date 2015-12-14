@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlatformScoring : MonoBehaviour {
     public bool isDown;
+    public int id;
 
     PlayerStats playerStats;
 
@@ -20,10 +21,11 @@ public class PlatformScoring : MonoBehaviour {
             
             if (mStats.goalDown && isDown)
             {
+                print("I made it here");
                 playerStats.updateHealth(mStats.healthPoints);
                 
             }
-            Destroy(mStats.gameObject);
+            //Destroy(mStats.gameObject);
         }
     }
 }

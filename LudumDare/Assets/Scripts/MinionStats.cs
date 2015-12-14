@@ -7,6 +7,7 @@ public class MinionStats : MonoBehaviour {
     public int healthPoints;
     public bool goalDown;
     public SpriteRenderer arrowThought;
+    public PlatformScoring goal;
 
     void Start()
     {

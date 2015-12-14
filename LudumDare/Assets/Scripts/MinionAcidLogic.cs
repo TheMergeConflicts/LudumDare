@@ -31,7 +31,7 @@ public class MinionAcidLogic : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        print(collider.tag);
+
         if (collider.tag == "Acid")
         {
             anim.SetTrigger("Acid");
