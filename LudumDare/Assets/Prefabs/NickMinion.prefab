@@ -311,6 +311,11 @@ MonoBehaviour:
   goalDown: 0
   arrowThought: {fileID: 21275122}
   goal: {fileID: 0}
+  colors:
+  - {r: 0.20242213, g: 0.8602941, b: 0.31584835, a: 1}
+  - {r: 0.97794116, g: 0.13662414, b: 0.13662414, a: 1}
+  - {r: 0.24264705, g: 0.75973624, b: 0.9705882, a: 1}
+  - {r: 0.95956326, g: 0.9705882, b: 0.17128026, a: 1}
 --- !u!114 &11478320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -505,6 +510,70 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: jumpForce
       value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[0].r
+      value: 0.20242213
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[0].g
+      value: 0.8602941
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[0].b
+      value: 0.31584835
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[1].r
+      value: 0.97794116
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[1].g
+      value: 0.13662414
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[1].b
+      value: 0.13662414
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[2].r
+      value: 0.24264705
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[2].g
+      value: 0.75973624
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[2].b
+      value: 0.9705882
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[3].r
+      value: 0.95956326
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[3].g
+      value: 0.9705882
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[3].b
+      value: 0.17128026
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[2].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colors.Array.data[3].a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -8,16 +8,20 @@ public class MinionStats : MonoBehaviour {
     public bool goalDown;
     public SpriteRenderer arrowThought;
     public PlatformScoring goal;
+    SpriteRenderer render;
+    public Color[] colors = new Color[4]; 
 
     void Start()
     {
        arrowThought.flipY = goalDown;
         transform.localScale = new Vector3(-direction.x * transform.localScale.x, transform.localScale.y, 1);
+        render = GetComponent<SpriteRenderer>();
 
     }
 
     void Update()
     {
+        render.color = colors[goal.id];
     }
 
     public void setGoalDown()
