@@ -53,31 +53,32 @@ public class UImanager : MonoBehaviour {
 			SetInGameUI (false);
 			SetMainMenuUI (false);
 			SetPregameUI (true);
-			if (Application.isMobilePlatform) {
-				foreach(Touch touch in Input.touches){
-					if(touch.phase == TouchPhase.Ended){
-						//Left Touch
-						if (touch.position.x < Screen.width / 2f) {
-							leftSet = true;
-						}
-						//Right Touch
-						else {
-							rightSet = true;
-						}
+
+			//Mobile
+			foreach(Touch touch in Input.touches){
+				if(touch.phase == TouchPhase.Ended){
+					//Left Touch
+					if (touch.position.x < Screen.width / 2f) {
+						leftSet = true;
+						leftTutorialAnim.SetTrigger ("fadeOut");
+					}
+					//Right Touch
+					else {
+						rightSet = true;
+						rightTutorialAnim.SetTrigger ("fadeOut");
 					}
 				}
-			} 
-			else {
-				if (Input.GetButtonDown("LeftButton"))
-				{
-					leftTutorialAnim.SetTrigger ("fadeOut");
-					leftSet = true;
-				}
-				if (Input.GetButtonDown("RightButton"))
-				{
-					rightTutorialAnim.SetTrigger ("fadeOut");
-					rightSet = true;
-				}
+			}
+			//Arrow keys	
+			if (Input.GetButtonDown("LeftButton"))
+			{
+				leftTutorialAnim.SetTrigger ("fadeOut");
+				leftSet = true;
+			}
+			if (Input.GetButtonDown("RightButton"))
+			{
+				rightTutorialAnim.SetTrigger ("fadeOut");
+				rightSet = true;
 			}
 
 			if(rightSet && leftSet){

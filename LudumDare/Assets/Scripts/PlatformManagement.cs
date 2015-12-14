@@ -30,6 +30,7 @@ public class PlatformManagement : MonoBehaviour {
         }
         else
         {
+			UpdateMobileInput();
             updateInput();
         }
         updateRopePosition(LEFT);
