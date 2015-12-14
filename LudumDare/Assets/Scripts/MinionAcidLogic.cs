@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MinionAcidLogic : MonoBehaviour {
     public float destroyTime = 4;
+    public SoundManager sManager;
     MinionMovement movement;
     Animator anim;
     Rigidbody2D rigid;
@@ -20,7 +21,7 @@ public class MinionAcidLogic : MonoBehaviour {
         if (inAcid)
         {
             destroyTime = Mathf.MoveTowards(destroyTime, 0, Time.deltaTime);
-            rigid.velocity = Vector2.up * -.2f;
+            rigid.velocity = Vector2.up * -.6f;
         }
 
         if (destroyTime <= 0)
@@ -36,7 +37,11 @@ public class MinionAcidLogic : MonoBehaviour {
         {
             anim.SetTrigger("Acid");
             inAcid = true;
-            movement.enabled = false; 
+            movement.enabled = false;
+            sManager.setRandomClip();
+            sManager.setRandomPitch();
+            sManager.setRandomVolume();
+            sManager.playSound();
         }
     }
 }

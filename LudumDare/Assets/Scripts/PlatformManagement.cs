@@ -10,11 +10,14 @@ public class PlatformManagement : MonoBehaviour {
     public float ropeSpeed = 15;
     public bool isMobile;
 
+    SoundManager sManager;
+
     int[] currentPositions;
     bool[] moveUp;
 
     void Start()
     {
+        sManager = GetComponent<SoundManager>();
         moveUp = new bool[ropeTransforms.Length];
         currentPositions = new int[ropePositions.Length];
         isMobile = Application.isMobilePlatform;
@@ -76,7 +79,10 @@ public class PlatformManagement : MonoBehaviour {
 
     void moveRope(int id)
     {
-        
+        sManager.setRandomClip();
+        sManager.setRandomPitch();
+        sManager.setRandomVolume();
+        sManager.playSound();   
         int currentPos = currentPositions[id];
         if (moveUp[id] && currentPos <= 0)
         {

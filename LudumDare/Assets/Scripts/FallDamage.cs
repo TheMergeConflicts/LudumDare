@@ -5,6 +5,7 @@ public class FallDamage : MonoBehaviour {
     public float lethalHeight;
     public Vector3 positionBeforeFall;
     public float timeBeforeDestroy = 3;
+    public SoundManager sManager;
     Rigidbody2D rigid;
     bool hasFallen;
     Animator anim;
@@ -45,6 +46,10 @@ public class FallDamage : MonoBehaviour {
             anim.SetTrigger("Fall");
             movement.speed = 0;
             rigid.isKinematic = true;
+            sManager.setRandomClip();
+            sManager.setRandomPitch();
+            sManager.setRandomVolume();
+            sManager.playSound();
 
         }
     }

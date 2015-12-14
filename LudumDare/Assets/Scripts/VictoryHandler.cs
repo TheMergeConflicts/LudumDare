@@ -4,11 +4,14 @@ using System.Collections;
 public class VictoryHandler : MonoBehaviour {
     public float pauseTime = .8f;
     public float destroyTimer = 1.2f;
+    public AudioSource correctSound;
+    public SoundManager sManager;
     bool reachedCheckPoint;
     Rigidbody2D rigid;
     Animator anim;
     MinionStats mStats;
     MinionMovement movement;
+    
 
     void Start()
     {
@@ -31,11 +34,18 @@ public class VictoryHandler : MonoBehaviour {
         if (pauseTime <= 0)
         {
             rigid.isKinematic = false;
+
+            if (!correctSound.isPlaying)
+            {
+                correctSound.Play();
+
+            }
             movement.speed = 1;
         }
 
         if (destroyTimer <= 0)
         {
+
             Destroy(this.gameObject);
         }
     }
@@ -45,13 +55,18 @@ public class VictoryHandler : MonoBehaviour {
         PlatformScoring pScore = collider.GetComponent<PlatformScoring>();
         if (pScore != null)
         { 
-            print(pScore.id + "     " + mStats.goal.id);
+
             if (pScore.id == mStats.goal.id)
             {
                 anim.SetTrigger("Victory");
                 //rigid.isKinematic = true;
+                rigid.AddForce(Vector2.up * 100);
                 movement.speed = 0;
                 reachedCheckPoint = true;
+                sManager.setRandomClip();
+                sManager.setRandomPitch();
+                sManager.setRandomVolume();
+                sManager.playSound();
             }
             
 

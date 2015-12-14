@@ -5,14 +5,20 @@ public class MinionMovement : MonoBehaviour {
     public float jumpForce = 50;
     public float speed;
     public Transform checkJumpOrigin;
+    public AudioClip[] squishSounds = new AudioClip[4];
+    public AudioClip[] boneSounds = new AudioClip[4];
+    public AudioClip[] currentClips;
 
     Rigidbody2D rigid;
     MinionStats stats;
     bool inAir;
+    AudioSource aSource;
     void Start()
     {
         stats = GetComponent<MinionStats>();
         rigid = GetComponent<Rigidbody2D>();
+        aSource = GetComponent<AudioSource>();
+        currentClips = squishSounds;
     }
 
     void Update()
@@ -37,5 +43,26 @@ public class MinionMovement : MonoBehaviour {
         }
         
         //gameObject.layer = 1;
+    }
+
+    public void playStep()
+    {
+        aSource.clip = currentClips[Random.Range(0, currentClips.Length)];
+        aSource.pitch = Random.Range(.95f, 1.05f);
+        aSource.volume = Random.Range(.2f, 0.25f);
+        aSource.Stop();
+        aSource.Play();
+    }
+
+    void OnCollisionEnter2D(Collision2D collider)
+    {
+        if (collider.collider.gameObject.layer == LayerMask.NameToLayer("Platform"))
+        {
+            currentClips = boneSounds;
+        }
+        else if (collider.collider.gameObject.layer == LayerMask.NameToLayer("SquishPlatform"))
+        {
+            currentClips = squishSounds;
+        }
     }
 }
