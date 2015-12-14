@@ -63,9 +63,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 495502}
   - 212: {fileID: 21242498}
+  - 68: {fileID: 6839084}
   - 50: {fileID: 5073972}
-  - 61: {fileID: 6157886}
-  m_Layer: 0
+  - 61: {fileID: 6153336}
+  - 251: {fileID: 25120158}
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +588,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.37, y: -0.35605767, z: 0}
+  m_LocalPosition: {x: 6.92, y: -0.35605767, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 496882}
@@ -612,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 153730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5.215, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 9
@@ -624,7 +626,7 @@ Transform:
   m_GameObject: {fileID: 129688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.203, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 5
@@ -636,7 +638,7 @@ Transform:
   m_GameObject: {fileID: 121538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.233, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 7
@@ -647,7 +649,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.26, y: -0.35605767, z: 0}
+  m_LocalPosition: {x: -6.91, y: -0.35605767, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477820}
@@ -673,7 +675,7 @@ Transform:
   m_GameObject: {fileID: 148214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5.215, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 9
@@ -685,7 +687,7 @@ Transform:
   m_GameObject: {fileID: 131942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 6.245, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 11
@@ -697,7 +699,7 @@ Transform:
   m_GameObject: {fileID: 110890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.718, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 4
@@ -709,7 +711,7 @@ Transform:
   m_GameObject: {fileID: 199990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.146, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 1
@@ -721,7 +723,7 @@ Transform:
   m_GameObject: {fileID: 190684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.718, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 4
@@ -733,7 +735,7 @@ Transform:
   m_GameObject: {fileID: 132674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.176, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 3
@@ -745,7 +747,7 @@ Transform:
   m_GameObject: {fileID: 161506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.704, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 6
@@ -757,7 +759,7 @@ Transform:
   m_GameObject: {fileID: 196758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.203, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 5
@@ -769,7 +771,7 @@ Transform:
   m_GameObject: {fileID: 184958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.704, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 6
@@ -781,7 +783,7 @@ Transform:
   m_GameObject: {fileID: 138620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5.716, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 10
@@ -793,7 +795,7 @@ Transform:
   m_GameObject: {fileID: 111286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.146, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 1
@@ -805,7 +807,7 @@ Transform:
   m_GameObject: {fileID: 165818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 6.787, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 12
@@ -817,7 +819,7 @@ Transform:
   m_GameObject: {fileID: 177500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.647, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 2
@@ -840,7 +842,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.91, z: 0}
+  m_LocalPosition: {x: 0, y: 2.18, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 495502}
@@ -856,7 +858,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.8, z: 0}
+  m_LocalPosition: {x: 0, y: -6.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 473980}
@@ -869,7 +871,7 @@ Transform:
   m_GameObject: {fileID: 107322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.233, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 7
@@ -881,7 +883,7 @@ Transform:
   m_GameObject: {fileID: 175550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.775, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 8
@@ -892,7 +894,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.4309425, z: 0}
+  m_LocalPosition: {x: 0, y: 6.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454814}
@@ -907,7 +909,7 @@ Transform:
   m_GameObject: {fileID: 151802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.59, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 0
@@ -919,7 +921,7 @@ Transform:
   m_GameObject: {fileID: 169248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 6.787, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 12
@@ -931,7 +933,7 @@ Transform:
   m_GameObject: {fileID: 144166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 6.245, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 11
@@ -943,7 +945,7 @@ Transform:
   m_GameObject: {fileID: 124908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.647, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 2
@@ -955,7 +957,7 @@ Transform:
   m_GameObject: {fileID: 130502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.176, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 3
@@ -966,8 +968,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13.5, y: 0.1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 2.02, y: 0.76, z: 1}
   m_Children: []
   m_Father: {fileID: 463108}
   m_RootOrder: 0
@@ -979,7 +981,7 @@ Transform:
   m_GameObject: {fileID: 141914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.59, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 0
@@ -991,7 +993,7 @@ Transform:
   m_GameObject: {fileID: 135720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5.716, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 409950}
   m_RootOrder: 10
@@ -1003,7 +1005,7 @@ Transform:
   m_GameObject: {fileID: 118798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.775, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 400938}
   m_RootOrder: 8
@@ -1466,8 +1468,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6157886
+--- !u!61 &6153336
 BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 8.02, y: 1}
+--- !u!68 &6839084
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1478,8 +1494,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Points:
+  - {x: -0.5, y: 0}
+  - {x: 0.5, y: 0}
 --- !u!114 &11485868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1498,6 +1515,7 @@ MonoBehaviour:
   - {fileID: 454814}
   - {fileID: 469818}
   ropeSpeed: 15
+  isMobile: 0
 --- !u!212 &21201210
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1524,7 +1542,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1554,7 +1572,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1584,7 +1602,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1614,7 +1632,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1644,7 +1662,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1704,7 +1722,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1764,7 +1782,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1794,7 +1812,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1824,7 +1842,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1854,7 +1872,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1884,7 +1902,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1914,7 +1932,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f2f001ea3a45114ca45f8f06c7a1aba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1944,7 +1962,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1974,7 +1992,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2004,7 +2022,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2034,7 +2052,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2064,7 +2082,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2094,7 +2112,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2124,7 +2142,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2154,7 +2172,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2184,7 +2202,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2214,7 +2232,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2244,7 +2262,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2274,7 +2292,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2304,7 +2322,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2334,7 +2352,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2364,7 +2382,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e92ec59e3f48b84a8ac76739ce05aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c2a0f0265dad34eb403e92b3574c19, type: 3}
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2380,7 +2398,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5075576}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.4333337}
   m_UseMotor: 0
@@ -2403,9 +2421,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5073972}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
-  m_ConnectedAnchor: {x: 0.47217938, y: 0.5394232}
+  m_ConnectedAnchor: {x: 3.4279315, y: 0.72887146}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2426,7 +2444,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5008846}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.6033333}
   m_UseMotor: 0
@@ -2449,7 +2467,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5001298}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5816666}
   m_UseMotor: 0
@@ -2472,7 +2490,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5008522}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5816666}
   m_UseMotor: 0
@@ -2495,7 +2513,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5043236}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5816666}
   m_UseMotor: 0
@@ -2518,7 +2536,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5063716}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.53500015}
   m_UseMotor: 0
@@ -2541,9 +2559,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5073972}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
-  m_ConnectedAnchor: {x: -0.4633762, y: 0.5394232}
+  m_ConnectedAnchor: {x: -3.418603, y: 0.72887146}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2564,7 +2582,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5046768}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.6033333}
   m_UseMotor: 0
@@ -2587,7 +2605,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5064874}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5816666}
   m_UseMotor: 0
@@ -2610,7 +2628,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5050638}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5349997}
   m_UseMotor: 0
@@ -2633,7 +2651,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5020630}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.62666655}
   m_UseMotor: 0
@@ -2656,7 +2674,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5091704}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.4333337}
   m_UseMotor: 0
@@ -2679,7 +2697,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5023464}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5083338}
   m_UseMotor: 0
@@ -2702,7 +2720,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5084264}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5816666}
   m_UseMotor: 0
@@ -2725,7 +2743,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5077710}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.53500015}
   m_UseMotor: 0
@@ -2748,7 +2766,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5029002}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5816666}
   m_UseMotor: 0
@@ -2771,7 +2789,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5027920}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.53500015}
   m_UseMotor: 0
@@ -2794,7 +2812,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5023838}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.6033333}
   m_UseMotor: 0
@@ -2817,7 +2835,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5036978}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.62666655}
   m_UseMotor: 0
@@ -2840,7 +2858,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5018512}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.60333407}
   m_UseMotor: 0
@@ -2863,7 +2881,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5087582}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5349997}
   m_UseMotor: 0
@@ -2886,7 +2904,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5043626}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.60333407}
   m_UseMotor: 0
@@ -2909,7 +2927,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5087694}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.5083338}
   m_UseMotor: 0
@@ -2932,7 +2950,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5021906}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.6033333}
   m_UseMotor: 0
@@ -2955,7 +2973,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5049442}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.022109032, y: -0.3}
   m_ConnectedAnchor: {x: 0.022108555, y: 0.53500015}
   m_UseMotor: 0
@@ -2966,6 +2984,23 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 50
+--- !u!251 &25120158
+PlatformEffector2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112212}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

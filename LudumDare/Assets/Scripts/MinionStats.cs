@@ -11,11 +11,12 @@ public class MinionStats : MonoBehaviour {
     void Start()
     {
        arrowThought.flipY = goalDown;
+        transform.localScale = new Vector3(-direction.x * transform.localScale.x, transform.localScale.y, 1);
+
     }
 
     void Update()
     {
-        transform.localScale = new Vector3(-direction.x, 1, 1);
     }
 
     public void setGoalDown()
