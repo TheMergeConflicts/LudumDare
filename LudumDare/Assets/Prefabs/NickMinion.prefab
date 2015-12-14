@@ -15,6 +15,7 @@ GameObject:
   - 95: {fileID: 9522518}
   - 114: {fileID: 11478320}
   - 212: {fileID: 21218348}
+  - 114: {fileID: 11439128}
   m_Layer: 9
   m_Name: NickMinion
   m_TagString: Minion
@@ -254,6 +255,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11439128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f108f5c32b361e144bdffd679257c010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 4
 --- !u!114 &11454676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -296,6 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lethalHeight: 6
   positionBeforeFall: {x: 0, y: 0, z: 0}
+  timeBeforeDestroy: 3
 --- !u!212 &21211378
 SpriteRenderer:
   m_ObjectHideFlags: 1

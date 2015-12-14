@@ -3735,10 +3735,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1299363931}
   - 61: {fileID: 1299363933}
-  - 114: {fileID: 1299363932}
   m_Layer: 0
   m_Name: Destroyer
-  m_TagString: Untagged
+  m_TagString: Acid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3750,22 +3749,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1299363930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -51.5, z: 0}
+  m_LocalPosition: {x: 0, y: -31.73, z: 0}
   m_LocalScale: {x: 300, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 1535048844}
   m_RootOrder: 4
---- !u!114 &1299363932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1299363930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14a8ebe9d6e944140b3d72e0f665b848, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1299363933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4766,7 +4754,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minions:
-  - {fileID: 142630, guid: 9a0b43bc0e4eeb847b12d8b376c2eec4, type: 2}
   - {fileID: 100030, guid: 9db40cffcc6bda04ebeac5d5f30374e1, type: 2}
   spawners:
   - {fileID: 794995775}
@@ -5674,7 +5661,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1847235125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.03, z: 1}
+  m_LocalPosition: {x: -0.01, y: 0.03, z: 2.58}
   m_LocalScale: {x: 1.1551113, y: 1.1508071, z: 1}
   m_Children:
   - {fileID: 1073932979}
