@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: -1, y: 0}
-  healthPoints: 1
+  healthPoints: 3
   goalDown: 0
   arrowThought: {fileID: 21275122}
   goal: {fileID: 0}
@@ -1194,6 +1194,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Volume
       value: 0.287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: healthPoints
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -10,6 +10,8 @@ public class PlatformManagement : MonoBehaviour {
     public float ropeSpeed = 15;
     public bool isMobile;
 
+    public UImanager uiManager;
+
     SoundManager sManager;
 
     int[] currentPositions;
@@ -26,7 +28,22 @@ public class PlatformManagement : MonoBehaviour {
 
     void Update()
     {	
-        if (isMobile)
+        if (uiManager.currentState == UImanager.UIState.mainMenu)
+        {
+            int move = Random.Range(0, 200);
+            if (move < 1)
+            {
+                if(Random.Range(0, 2) == 0)
+                {
+                    moveRope(RIGHT);
+                }
+                else
+                {
+                    moveRope(LEFT);
+                }
+            }
+        }
+        else if (isMobile)
         {
             UpdateMobileInput();
 
@@ -58,12 +75,12 @@ public class PlatformManagement : MonoBehaviour {
 				//Left Touch
 				if (touch.position.x < Screen.width / 2f) {
 					moveRope(LEFT);
-					Debug.Log("left end");
+					//Debug.Log("left end");
 				}
 				//Right Touch
 				else {
 					moveRope(RIGHT);
-					Debug.Log("right end");
+					//Debug.Log("right end");
 				}
 			}
 		}

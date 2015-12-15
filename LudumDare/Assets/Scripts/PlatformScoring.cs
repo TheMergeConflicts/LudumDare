@@ -19,9 +19,9 @@ public class PlatformScoring : MonoBehaviour {
         if (mStats != null)
         {
             
-            if (mStats.goalDown && isDown)
+            if (mStats.goal.id == id)
             {
-                print("I made it here");
+               
                 playerStats.updateHealth(mStats.healthPoints);
                 
             }

@@ -13,6 +13,8 @@ public class UImanager : MonoBehaviour {
 	public GameObject creditsPanel;
 	public GameObject mainMenuPanel;
 
+    public Animator healthBarAnim;
+
 	PlayerStats playerStats;
 	Animator leftTutorialAnim;
 	Animator rightTutorialAnim;

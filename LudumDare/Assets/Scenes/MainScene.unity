@@ -115,11 +115,11 @@ RectTransform:
   - {fileID: 1774021305}
   m_Father: {fileID: 470507113}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232, y: 167}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0}
   m_SizeDelta: {x: 338.7, y: 60.5}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &41512715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1679,6 +1679,7 @@ GameObject:
   - 224: {fileID: 470507113}
   - 222: {fileID: 470507112}
   - 114: {fileID: 470507111}
+  - 95: {fileID: 470507114}
   m_Layer: 5
   m_Name: InGame
   m_TagString: Untagged
@@ -1738,6 +1739,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &470507114
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470507110}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e890a139a9ef21a448175414c9a5de52, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &496048196 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11484236, guid: 16c8568aa01184c469dbee7a77116a52,
@@ -3365,7 +3383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1148103317
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3378,11 +3396,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 470507113}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14.8, y: 167.3}
-  m_SizeDelta: {x: 476.5, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 476.5, y: 63.600006}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1148103318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3403,11 +3421,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 0443a5d849e6d4e489f89d5c83b2c0b2, type: 3}
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 3
     m_MaxSize: 55
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -4664,6 +4682,7 @@ MonoBehaviour:
   inGamePanel: {fileID: 470507110}
   creditsPanel: {fileID: 1917007899}
   mainMenuPanel: {fileID: 630917577}
+  healthBarAnim: {fileID: 470507114}
 --- !u!1 &1442803809
 GameObject:
   m_ObjectHideFlags: 0
@@ -5336,6 +5355,7 @@ MonoBehaviour:
   - {fileID: 1653415595}
   ropeSpeed: 15
   isMobile: 0
+  uiManager: {fileID: 1404258500}
 --- !u!4 &1637384140
 Transform:
   m_ObjectHideFlags: 0
@@ -6586,8 +6606,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 142}
-  m_SizeDelta: {x: 541.5, y: 100}
+  m_AnchoredPosition: {x: 0, y: 74.99999}
+  m_SizeDelta: {x: 590, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1939905473
 MonoBehaviour:
@@ -6601,14 +6621,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6838235, g: 0.2162089, b: 0.2162089, a: 1}
+  m_Color: {r: 0.6544118, g: 0.6544118, b: 0.6544118, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4207286b8455fd7488146332029c806d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

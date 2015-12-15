@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour {
 
     float maxHealth;
     float ageTimer;
-    float deteriationRate = .5f;
+    float deteriationRate = .8f;
     MinionSpawner spawner;
 
     void Start()
