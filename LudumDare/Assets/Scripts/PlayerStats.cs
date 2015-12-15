@@ -49,7 +49,10 @@ public class PlayerStats : MonoBehaviour {
             ageTimer = yearTime;
             age++;
             spawner.increaseSpawnRate();
-            deteriationRate *= 1.03f;
+			if(deteriationRate < 8.5f){
+				deteriationRate *= 1.03f;
+			}
+            
         }
 
     }

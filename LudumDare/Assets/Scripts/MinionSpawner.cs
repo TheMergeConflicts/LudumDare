@@ -57,13 +57,13 @@ public class MinionSpawner : MonoBehaviour {
     {
         respawnTimeMax -= .05f;
         respawnTimeMin -= .05f;
-        if (respawnTimeMin < 1)
+        if (respawnTimeMin < 0.8f)
         {
-            respawnTimeMin = 1;
+            respawnTimeMin = 0.8f;
         }
-        if (respawnTimeMax < 2)
+		if (respawnTimeMax < 1.7f)
         {
-            respawnTimeMax = 2;
+            respawnTimeMax = 1.7f;
         }
     }
 
