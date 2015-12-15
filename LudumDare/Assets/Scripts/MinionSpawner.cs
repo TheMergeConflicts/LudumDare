@@ -5,13 +5,23 @@ public class MinionSpawner : MonoBehaviour {
     public GameObject[] minions;
     public SpawnStats[] spawners;
     public float respawnTimeMin;
+    float initMin;
     public float respawnTimeMax;
+    float initMax;
    
     float respawnTimer;
     
     void Start()
     {
         restartTimer();
+        initMin = respawnTimeMin;
+        initMax = respawnTimeMax;
+    }
+
+    public void resetRespawnTime()
+    {
+        respawnTimeMin = initMin;
+        respawnTimeMax = initMax;
     }
 
     void Update()

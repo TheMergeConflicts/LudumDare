@@ -10,7 +10,8 @@ public class PlayerStats : MonoBehaviour {
 
     float maxHealth;
     float ageTimer;
-    float deteriationRate = .8f;
+    float deteriationRate = 1.3f;
+    float initDeteriationRate = 1.3f;
     MinionSpawner spawner;
 
     void Start()
@@ -18,6 +19,12 @@ public class PlayerStats : MonoBehaviour {
         this.maxHealth = this.health;
         ageTimer = yearTime;
         spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<MinionSpawner>();
+    }
+
+    public void reset()
+    {
+        spawner.resetRespawnTime();
+        deteriationRate = initDeteriationRate;
     }
 
     void Update()

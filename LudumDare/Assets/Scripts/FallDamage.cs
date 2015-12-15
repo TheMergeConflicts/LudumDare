@@ -10,6 +10,7 @@ public class FallDamage : MonoBehaviour {
     bool hasFallen;
     Animator anim;
     MinionMovement movement;
+    public GameObject thoughtBubble;
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class FallDamage : MonoBehaviour {
         float checkFallDamage = Mathf.Abs(transform.position.y - positionBeforeFall.y);
         if (checkFallDamage > lethalHeight)
         {
-            //Destroy(this.gameObject);
+            Destroy(thoughtBubble);
             hasFallen = true;
             anim.SetTrigger("Fall");
             movement.speed = 0;

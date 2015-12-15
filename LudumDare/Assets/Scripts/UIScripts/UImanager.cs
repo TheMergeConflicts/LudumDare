@@ -149,6 +149,7 @@ public class UImanager : MonoBehaviour {
 		finalAge = 0;
 		playerStats.age = 0;
 		playerStats.health = 100;
+        playerStats.reset();
 		GameObject[] minions = GameObject.FindGameObjectsWithTag ("Minion");
 		foreach(GameObject minion in minions){
 			Destroy (minion);

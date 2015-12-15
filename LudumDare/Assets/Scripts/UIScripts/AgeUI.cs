@@ -16,9 +16,9 @@ public class AgeUI : MonoBehaviour {
     void Update()
     {
         int agePicker = (int)(stats.age / 10);
-        if (agePicker >= ageImages.Length)
+        if (agePicker >= ageImages.Length - 2)
         {
-            agePicker = ageImages.Length - 1;
+            agePicker = ageImages.Length - 2;
         }
         currentImage.sprite = ageImages[agePicker];
     }

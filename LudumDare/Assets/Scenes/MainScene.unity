@@ -1221,7 +1221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   age: 0
   health: 100
-  yearTime: 5
+  yearTime: 1.5
   UImanager: {fileID: 1404258500}
 --- !u!4 &317407757
 Transform:
@@ -5835,7 +5835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minions:
-  - {fileID: 100030, guid: 9db40cffcc6bda04ebeac5d5f30374e1, type: 2}
+  - {fileID: 185298, guid: 9db40cffcc6bda04ebeac5d5f30374e1, type: 2}
   spawners:
   - {fileID: 794995775}
   - {fileID: 517922764}
