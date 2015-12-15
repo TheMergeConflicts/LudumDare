@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AgeUI.cs" />
     <Compile Include="Assets\Scripts\AcidSoundPlayer.cs" />
     <Compile Include="Assets\Scripts\BubblePop.cs" />
     <Compile Include="Assets\Scripts\BubbleSpawner.cs" />

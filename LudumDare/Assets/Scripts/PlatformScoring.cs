@@ -4,6 +4,7 @@ using System.Collections;
 public class PlatformScoring : MonoBehaviour {
     public bool isDown;
     public int id;
+    public Animator increaseHealthUI;
 
     PlayerStats playerStats;
 
@@ -23,6 +24,7 @@ public class PlatformScoring : MonoBehaviour {
             {
                
                 playerStats.updateHealth(mStats.healthPoints);
+                increaseHealthUI.SetTrigger("Increase");
                 
             }
             //Destroy(mStats.gameObject);
