@@ -10,6 +10,7 @@ public class BubblePop : MonoBehaviour {
     float activeTimer;
     bool isPopped;
     Animator anim;
+    AudioSource aSource;
 
 
     void Start()
@@ -18,6 +19,7 @@ public class BubblePop : MonoBehaviour {
         transform.localScale = new Vector3(scaleX, scaleX, 1);
         activeTimer = Random.Range(minTime, maxTime);
         anim = GetComponent<Animator>();
+        aSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -25,6 +27,10 @@ public class BubblePop : MonoBehaviour {
         activeTimer = Mathf.MoveTowards(activeTimer, 0, Time.deltaTime);
         if (activeTimer <= 0)
         {
+            if(!aSource.isPlaying)
+            {
+                aSource.Play();
+            }
             if (isPopped)
             {
                 Destroy(this.gameObject);
