@@ -12,8 +12,13 @@ public class UImanager : MonoBehaviour {
 	public GameObject inGamePanel;
 	public GameObject creditsPanel;
 	public GameObject mainMenuPanel;
+	public GameObject pausePanel;
+
+	public Text finalResult;
 
     public Animator healthBarAnim;
+
+	public int finalAge;
 
 	PlayerStats playerStats;
 	Animator leftTutorialAnim;
@@ -23,6 +28,7 @@ public class UImanager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		finalAge = 0;
 		leftSet = false;
 		rightSet = false;
 		currentState = UIState.mainMenu;
@@ -37,6 +43,7 @@ public class UImanager : MonoBehaviour {
 			SetInGameUI (true);
 			SetMainMenuUI (false);
 			SetPregameUI (false);
+			SetPauseGameUI (false);
 			ageText.text = "Age: " + playerStats.age;
 			healthBar.value = playerStats.health;
 		}
@@ -44,18 +51,19 @@ public class UImanager : MonoBehaviour {
 			SetInGameUI (false);
 			SetMainMenuUI (true);
 			SetPregameUI (false);
+			SetPauseGameUI (false);
 		}
 		else if(currentState == UIState.pauseScreen){
 			SetInGameUI (false);
 			SetMainMenuUI (false);
 			SetPregameUI (false);
-
+			SetPauseGameUI (true);
 		}
 		else if(currentState == UIState.preGame){
 			SetInGameUI (false);
 			SetMainMenuUI (false);
 			SetPregameUI (true);
-
+			SetPauseGameUI (false);
 			//Mobile
 			foreach(Touch touch in Input.touches){
 				if(touch.phase == TouchPhase.Ended){
@@ -92,6 +100,10 @@ public class UImanager : MonoBehaviour {
 		}
 	}
 
+	void SetPauseGameUI(bool state){
+		pausePanel.SetActive (state);
+	}
+
 	void SetPregameUI(bool state){
 		pregamePanel.SetActive (state);
 	}
@@ -110,6 +122,19 @@ public class UImanager : MonoBehaviour {
 
 	public void StartPreGame(){
 		currentState = UIState.preGame;
+		ResetGame ();
+	}
+
+	public void StartPauseGame(){
+		finalResult.text = "You survived to age" + "\n" + "<size=50>" + finalAge + "</size>";
+		currentState = UIState.pauseScreen;
+	}
+
+
+
+	public void StartMainMenu(){
+		currentState = UIState.mainMenu;
+		Debug.Log ("Main Menu");
 	}
 
 	public void EndGame(){
@@ -121,6 +146,9 @@ public class UImanager : MonoBehaviour {
 	}
 		
 	public void ResetGame(){
+		finalAge = 0;
+		playerStats.age = 0;
+		playerStats.health = 100;
 		GameObject[] minions = GameObject.FindGameObjectsWithTag ("Minion");
 		foreach(GameObject minion in minions){
 			Destroy (minion);

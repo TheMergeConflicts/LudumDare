@@ -27,6 +27,11 @@ public class PlayerStats : MonoBehaviour {
 			health = Mathf.MoveTowards(health, 0, Time.deltaTime * deteriationRate);
 			updateAge();
 		}
+
+		if(health <= 0f && UImanager.currentState == UImanager.UIState.inGame){
+			UImanager.finalAge = age;
+			UImanager.StartPauseGame ();
+		}
     }
 
     void updateAge ()
