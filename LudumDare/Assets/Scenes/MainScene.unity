@@ -420,6 +420,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1941640773}
   m_RootOrder: 0
+--- !u!1 &91218640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 91218641}
+  - 114: {fileID: 91218643}
+  - 61: {fileID: 91218642}
+  m_Layer: 0
+  m_Name: EdgeDestroyer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &91218641
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91218640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.09, y: -15.15, z: 0}
+  m_LocalScale: {x: 23.32, y: 21, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1535048844}
+  m_RootOrder: 5
+--- !u!61 &91218642
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91218640}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!114 &91218643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91218640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a8ebe9d6e944140b3d72e0f665b848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &94305764 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 109026, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
@@ -4955,7 +5009,7 @@ GameObject:
   - 82: {fileID: 1299363932}
   - 114: {fileID: 1299363934}
   m_Layer: 0
-  m_Name: Destroyer
+  m_Name: Acid
   m_TagString: Acid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6153,6 +6207,8 @@ Transform:
   - {fileID: 894184077}
   - {fileID: 1551502241}
   - {fileID: 1299363931}
+  - {fileID: 91218641}
+  - {fileID: 1690794602}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &1535048845
@@ -6843,6 +6899,60 @@ SpriteRenderer:
   m_Color: {r: 0.5808823, g: 0.49274847, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1690794601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1690794602}
+  - 114: {fileID: 1690794604}
+  - 61: {fileID: 1690794603}
+  m_Layer: 0
+  m_Name: EdgeDestroyer (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1690794602
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1690794601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.11, y: -15.15, z: 0}
+  m_LocalScale: {x: 23.32, y: 21, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1535048844}
+  m_RootOrder: 6
+--- !u!61 &1690794603
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1690794601}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!114 &1690794604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1690794601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a8ebe9d6e944140b3d72e0f665b848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1697020259
 GameObject:
   m_ObjectHideFlags: 0
