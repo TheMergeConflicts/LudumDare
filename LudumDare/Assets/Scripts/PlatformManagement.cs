@@ -10,6 +10,9 @@ public class PlatformManagement : MonoBehaviour {
     public float ropeSpeed = 15;
     public bool isMobile;
 
+    public HingeJoint2D leftRopeEnd;
+    public HingeJoint2D rightRopeEnd;
+
     public UImanager uiManager;
 
     SoundManager sManager;
@@ -118,5 +121,13 @@ public class PlatformManagement : MonoBehaviour {
         {
             currentPositions[id]++;
         }
+    }
+
+    public void detachRope()
+    {
+        //need to move rope to top first before detaching
+        leftRopeEnd.enabled = false;
+        rightRopeEnd.enabled = false;
+
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class UImanager : MonoBehaviour {
-	public enum UIState{mainMenu, inGame, preGame, pauseScreen};
+	public enum UIState{mainMenu, inGame, preGame, endAnimation,endScreen};
 	public UIState currentState;
 	public Text ageText;
     public Slider healthBar;
@@ -12,7 +12,10 @@ public class UImanager : MonoBehaviour {
 	public GameObject inGamePanel;
 	public GameObject creditsPanel;
 	public GameObject mainMenuPanel;
-	public GameObject pausePanel;
+    public GameObject blackCoverPanel;
+    public GameObject endPanel;
+
+    public PlatformManagement platformManagement;
 
 	public Text finalResult;
 
@@ -42,28 +45,42 @@ public class UImanager : MonoBehaviour {
 		if(currentState == UIState.inGame){
 			SetInGameUI (true);
 			SetMainMenuUI (false);
-			SetPregameUI (false);
-			SetPauseGameUI (false);
+			SetPreGameUI (false);
+			SetEndGameUI (false);
+            SetEndAnimationUI(false);
 			ageText.text = "Age: " + playerStats.age;
 			healthBar.value = playerStats.health;
 		}
 		else if(currentState == UIState.mainMenu){
 			SetInGameUI (false);
 			SetMainMenuUI (true);
-			SetPregameUI (false);
-			SetPauseGameUI (false);
-		}
-		else if(currentState == UIState.pauseScreen){
+			SetPreGameUI (false);
+			SetEndGameUI (false);
+            SetEndAnimationUI(false);
+        }
+		else if(currentState == UIState.endScreen){
 			SetInGameUI (false);
 			SetMainMenuUI (false);
-			SetPregameUI (false);
-			SetPauseGameUI (true);
-		}
-		else if(currentState == UIState.preGame){
+			SetPreGameUI (false);
+			SetEndGameUI (true);
+            SetEndAnimationUI(true);
+        }
+        else if (currentState == UIState.endAnimation)
+        {
+            SetInGameUI(false);
+            SetMainMenuUI(false);
+            SetPreGameUI(false);
+            SetEndGameUI(false);
+            SetEndAnimationUI(true);
+            blackCoverPanel.GetComponent<Animator>().SetTrigger("fadeIn");
+            platformManagement.detachRope();
+        }
+        else if(currentState == UIState.preGame){
 			SetInGameUI (false);
-			SetMainMenuUI (false);
-			SetPregameUI (true);
-			SetPauseGameUI (false);
+            SetEndAnimationUI(false);
+            SetMainMenuUI (false);
+			SetPreGameUI (true);
+			SetEndGameUI (false);
 			//Mobile
 			foreach(Touch touch in Input.touches){
 				if(touch.phase == TouchPhase.Ended){
@@ -100,11 +117,11 @@ public class UImanager : MonoBehaviour {
 		}
 	}
 
-	void SetPauseGameUI(bool state){
-		pausePanel.SetActive (state);
+	void SetEndGameUI(bool state){
+		endPanel.SetActive (state);
 	}
 
-	void SetPregameUI(bool state){
+	void SetPreGameUI(bool state){
 		pregamePanel.SetActive (state);
 	}
 
@@ -116,6 +133,13 @@ public class UImanager : MonoBehaviour {
 		mainMenuPanel.SetActive (state);
 	}
 
+    void SetEndAnimationUI(bool state)
+    {
+        blackCoverPanel.SetActive(state);
+    }
+
+    //void SetEnd
+
 	public void StartGame(){
 		currentState = UIState.inGame;
 	}
@@ -125,12 +149,16 @@ public class UImanager : MonoBehaviour {
 		ResetGame ();
 	}
 
-	public void StartPauseGame(){
+	public void StartEndGame(){
 		finalResult.text = "You survived to age" + "\n" + "<size=50>" + finalAge + "</size>";
-		currentState = UIState.pauseScreen;
+		currentState = UIState.endScreen;
 	}
 
-
+    public void StartEndAnimation()
+    {
+        currentState = UIState.endAnimation;
+        Invoke("StartEndGame", 1.5f);
+    }
 
 	public void StartMainMenu(){
 		currentState = UIState.mainMenu;
