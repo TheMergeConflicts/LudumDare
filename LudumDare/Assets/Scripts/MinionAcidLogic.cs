@@ -35,7 +35,7 @@ public class MinionAcidLogic : MonoBehaviour {
 
         if (collider.tag == "Acid")
         {
-            GameObject.FindGameObjectWithTag("Combo").GetComponent<ComboMultiplier>().resetMultiplier();\
+            GameObject.FindGameObjectWithTag("Combo").GetComponent<ComboMultiplier>().resetMultiplier();
 
             anim.SetTrigger("Acid");
             inAcid = true;

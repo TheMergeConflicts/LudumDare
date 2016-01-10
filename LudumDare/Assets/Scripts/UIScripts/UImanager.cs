@@ -73,7 +73,7 @@ public class UImanager : MonoBehaviour {
             SetEndGameUI(false);
             SetEndAnimationUI(true);
             blackCoverPanel.GetComponent<Animator>().SetTrigger("fadeIn");
-            platformManagement.detachRope();
+            platformManagement.DetachRope();
         }
         else if(currentState == UIState.preGame){
 			SetInGameUI (false);
@@ -178,6 +178,7 @@ public class UImanager : MonoBehaviour {
 		playerStats.age = 0;
 		playerStats.health = 100;
         playerStats.reset();
+        platformManagement.ResetPlatform();
 		GameObject[] minions = GameObject.FindGameObjectsWithTag ("Minion");
 		foreach(GameObject minion in minions){
 			Destroy (minion);

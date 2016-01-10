@@ -5,6 +5,11 @@ public class PlatformManagement : MonoBehaviour {
     public const int RIGHT = 0;
     public const int LEFT = 1;
 
+    public Transform bridge;
+    private Vector3 startingPos;
+    private Quaternion startingRot;
+    private Vector3 startingScale;
+
     public Transform[] ropeTransforms;
     public Transform[] ropePositions;
     public float ropeSpeed = 15;
@@ -22,11 +27,19 @@ public class PlatformManagement : MonoBehaviour {
 
     void Start()
     {
+        RecordBoneInitialTransform();
         sManager = GetComponent<SoundManager>();
         moveUp = new bool[ropeTransforms.Length];
         currentPositions = new int[ropePositions.Length];
         isMobile = Application.isMobilePlatform;
 
+    }
+
+    void RecordBoneInitialTransform()
+    {
+        startingPos = bridge.localPosition;
+        startingRot = bridge.localRotation;
+        startingScale = bridge.localScale;
     }
 
     void Update()
@@ -123,11 +136,26 @@ public class PlatformManagement : MonoBehaviour {
         }
     }
 
-    public void detachRope()
+    public void DetachRope()
     {
         //need to move rope to top first before detaching
         leftRopeEnd.enabled = false;
         rightRopeEnd.enabled = false;
+    }
 
+    public void ResetPlatform()
+    {
+        for (int i = 0; i < moveUp.Length; i++)
+        {
+            if (!moveUp[i])
+            {
+                moveRope(i);
+            }
+        }
+        bridge.localPosition = startingPos;
+        bridge.localRotation = startingRot;
+        bridge.localScale = startingScale;
+        leftRopeEnd.enabled = true;
+        rightRopeEnd.enabled = true;
     }
 }
