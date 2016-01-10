@@ -13,6 +13,10 @@ public class MinionMovement : MonoBehaviour {
     MinionStats stats;
     bool inAir;
     AudioSource aSource;
+
+    Vector3 previousPosition;
+    int previousCount;
+
     void Start()
     {
         stats = GetComponent<MinionStats>();
@@ -26,21 +30,47 @@ public class MinionMovement : MonoBehaviour {
         rigid.velocity = stats.direction * speed + Vector2.up * rigid.velocity.y;
         Debug.DrawLine(checkJumpOrigin.position, checkJumpOrigin.position + new Vector3(stats.direction.x, stats.direction.y, 0));
        // print(Physics2D.Raycast(checkJumpOrigin.position, stats.direction, 1f, 1 << LayerMask.NameToLayer("SquishPlatform")));
-        if (Physics2D.Raycast(checkJumpOrigin.position, stats.direction, 1f, 1 << LayerMask.NameToLayer("SquishPlatform")))
+        if (Physics2D.Raycast(checkJumpOrigin.position, stats.direction, 1f, 1 << LayerMask.NameToLayer("SquishPlatform")) && !inAir)
         {
-            jump();
+            platformJump();
+        }
+        checkMinionStuck();
+
+    }
+
+    void checkMinionStuck()
+    {
+        if (Mathf.Abs(previousPosition.x - transform.position.x) < .01f)
+        {
+            previousCount++;
+        }
+        else
+        {
+            previousCount = 0;
         }
 
+        if (previousCount > 30)
+        {
+            jump();
+            previousCount = 0;
+        }
+
+        previousPosition = transform.position;
+    }
+
+    void platformJump()
+    {
+        if (!inAir)
+        {
+            jump();
+            inAir = true;
+        }
     }
 
     void jump()
     {
-
-        if (!inAir)
-        {
-            rigid.AddForce(Vector2.up * jumpForce);
-            inAir = true;
-        }
+        rigid.AddForce(Vector2.up * jumpForce);
+        
         
         //gameObject.layer = 1;
     }
