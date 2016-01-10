@@ -15,6 +15,7 @@ public class UImanager : MonoBehaviour {
     public GameObject blackCoverPanel;
     public GameObject endPanel;
 
+    public MinionSpawner minionSpawner;
     public PlatformManagement platformManagement;
 
 	public Text finalResult;
@@ -50,6 +51,7 @@ public class UImanager : MonoBehaviour {
             SetEndAnimationUI(false);
 			ageText.text = "Age: " + playerStats.age;
 			healthBar.value = playerStats.health;
+            minionSpawner.StartSpawningMinions();
 		}
 		else if(currentState == UIState.mainMenu){
 			SetInGameUI (false);
@@ -57,6 +59,7 @@ public class UImanager : MonoBehaviour {
 			SetPreGameUI (false);
 			SetEndGameUI (false);
             SetEndAnimationUI(false);
+            minionSpawner.StartSpawningMinions();
         }
 		else if(currentState == UIState.endScreen){
 			SetInGameUI (false);
@@ -64,6 +67,7 @@ public class UImanager : MonoBehaviour {
 			SetPreGameUI (false);
 			SetEndGameUI (true);
             SetEndAnimationUI(true);
+            minionSpawner.EndSpawningMinions();
         }
         else if (currentState == UIState.endAnimation)
         {
@@ -74,6 +78,7 @@ public class UImanager : MonoBehaviour {
             SetEndAnimationUI(true);
             blackCoverPanel.GetComponent<Animator>().SetTrigger("fadeIn");
             platformManagement.DetachRope();
+            minionSpawner.EndSpawningMinions();
         }
         else if(currentState == UIState.preGame){
 			SetInGameUI (false);
@@ -81,8 +86,9 @@ public class UImanager : MonoBehaviour {
             SetMainMenuUI (false);
 			SetPreGameUI (true);
 			SetEndGameUI (false);
-			//Mobile
-			foreach(Touch touch in Input.touches){
+            minionSpawner.EndSpawningMinions();
+            //Mobile
+            foreach (Touch touch in Input.touches){
 				if(touch.phase == TouchPhase.Ended){
 					//Left Touch
 					if (touch.position.x < Screen.width / 2f) {
@@ -109,7 +115,6 @@ public class UImanager : MonoBehaviour {
 			}
 
 			if(rightSet && leftSet){
-				ResetGame ();
 				rightSet = false;
 				leftSet = false;
 				Invoke ("StartGame", leftTutorialAnim.GetCurrentAnimatorClipInfo(0).Length);
@@ -146,7 +151,7 @@ public class UImanager : MonoBehaviour {
 
 	public void StartPreGame(){
 		currentState = UIState.preGame;
-		ResetGame ();
+		ResetGame (false);
 	}
 
 	public void StartEndGame(){
@@ -172,13 +177,17 @@ public class UImanager : MonoBehaviour {
 	public void SetCreditsUI(bool state){
 		creditsPanel.SetActive (state);
 	}
-		
-	public void ResetGame(){
+	
+    // soft only resets the variables, but hard resets the platform
+	public void ResetGame(bool soft){
 		finalAge = 0;
 		playerStats.age = 0;
 		playerStats.health = 100;
         playerStats.reset();
-        platformManagement.ResetPlatform();
+        if (!soft)
+        {
+            platformManagement.ResetPlatform();
+        }
 		GameObject[] minions = GameObject.FindGameObjectsWithTag ("Minion");
 		foreach(GameObject minion in minions){
 			Destroy (minion);

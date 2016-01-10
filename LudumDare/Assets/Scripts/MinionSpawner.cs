@@ -5,6 +5,8 @@ public class MinionSpawner : MonoBehaviour {
     public GameObject[] minions;
     public SpawnStats[] spawners;
     public float respawnTimeMin;
+
+    bool spawning;
     float initMin;
     public float respawnTimeMax;
     float initMax;
@@ -13,6 +15,7 @@ public class MinionSpawner : MonoBehaviour {
     
     void Start()
     {
+        spawning = false;
         restartTimer();
         initMin = respawnTimeMin;
         initMax = respawnTimeMax;
@@ -27,7 +30,7 @@ public class MinionSpawner : MonoBehaviour {
     void Update()
     {
         respawnTimer = Mathf.MoveTowards(respawnTimer, 0, Time.deltaTime);
-        if (respawnTimer <= 0)
+        if (respawnTimer <= 0 && spawning)
         {
             restartTimer();
             createMinion();
@@ -71,6 +74,22 @@ public class MinionSpawner : MonoBehaviour {
     void restartTimer()
     {
         respawnTimer = Random.Range(respawnTimeMin, respawnTimeMax);
+    }
 
+    public void StartSpawningMinions()
+    {
+        if (!spawning)
+        {
+            spawning = true;
+        }
+        
+    }
+
+    public void EndSpawningMinions()
+    {
+        if (spawning)
+        {
+            spawning = false;
+        }
     }
 }

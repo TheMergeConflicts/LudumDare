@@ -5732,6 +5732,7 @@ MonoBehaviour:
   mainMenuPanel: {fileID: 630917577}
   blackCoverPanel: {fileID: 1875184478}
   endPanel: {fileID: 618136580}
+  minionSpawner: {fileID: 1535048845}
   platformManagement: {fileID: 1637384139}
   finalResult: {fileID: 1824861434}
   healthBarAnim: {fileID: 470507114}
