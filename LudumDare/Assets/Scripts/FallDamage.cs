@@ -42,6 +42,8 @@ public class FallDamage : MonoBehaviour {
         float checkFallDamage = Mathf.Abs(transform.position.y - positionBeforeFall.y);
         if (checkFallDamage > lethalHeight)
         {
+            GameObject.FindGameObjectWithTag("Combo").GetComponent<ComboMultiplier>().resetMultiplier();
+
             Destroy(thoughtBubble);
             hasFallen = true;
             anim.SetTrigger("Fall");

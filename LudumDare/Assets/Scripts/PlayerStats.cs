@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour {
     public float yearTime = 5;
 
 	public UImanager UImanager;
+    
 
     float maxHealth;
     float ageTimer;

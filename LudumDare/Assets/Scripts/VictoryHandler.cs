@@ -54,11 +54,12 @@ public class VictoryHandler : MonoBehaviour {
     {
         PlatformScoring pScore = collider.GetComponent<PlatformScoring>();
         if (pScore != null)
-        { 
-
+        {
+            ComboMultiplier combo = GameObject.FindGameObjectWithTag("Combo").GetComponent<ComboMultiplier>();
             if (pScore.id == mStats.goal.id)
             {
                 anim.SetTrigger("Victory");
+                combo.increaseMultiplier();
                 //rigid.isKinematic = true;
                 rigid.AddForce(Vector2.up * 100);
                 movement.speed = 0;
@@ -68,7 +69,10 @@ public class VictoryHandler : MonoBehaviour {
                 sManager.setRandomVolume();
                 sManager.playSound();
             }
-            
+            else
+            {
+                combo.resetMultiplier();
+            }
 
         }
     }
