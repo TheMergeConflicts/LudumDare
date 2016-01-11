@@ -69,7 +69,7 @@ public class VictoryHandler : MonoBehaviour {
                 sManager.setRandomVolume();
                 sManager.playSound();
             }
-            else
+            else if (mStats.initialSpawn.id != pScore.id)
             {
                 combo.resetMultiplier();
             }

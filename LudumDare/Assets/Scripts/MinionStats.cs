@@ -8,6 +8,7 @@ public class MinionStats : MonoBehaviour {
     public bool goalDown;
     public SpriteRenderer arrowThought;
     public PlatformScoring goal;
+    public PlatformScoring initialSpawn;
     SpriteRenderer render;
     public Color[] colors = new Color[4]; 
 

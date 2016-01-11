@@ -45,6 +45,8 @@ public class MinionSpawner : MonoBehaviour {
         MinionStats mStats = obj.GetComponent<MinionStats>();
         mStats.direction = sStats.direction;
         mStats.setGoalDown();
+        mStats.initialSpawn = sStats.spawnPlatform;
+    
         if (mStats.goalDown)
         {
             mStats.goal = sStats.downGoal;
