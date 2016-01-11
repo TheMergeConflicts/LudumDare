@@ -49,7 +49,7 @@ public class MinionMovement : MonoBehaviour {
             previousCount = 0;
         }
 
-        if (previousCount > 30)
+        if (previousCount > 60)
         {
             jump();
             previousCount = 0;

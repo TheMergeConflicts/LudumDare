@@ -8,26 +8,29 @@ public class ComboUIManager : MonoBehaviour {
     public Text comboText;
     public UImanager UIManager;
 
-	// Use this for initialization
-	void Start () {
-	    
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
+    Animator animator;
+
+    // Use this for initialization
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     void OnGUI()
     {
-        if (comboMultiplier.ticks > 0)
+        if (comboMultiplier.totalStreak > 0)
         {
             comboText.enabled = true;
-            comboText.text = comboMultiplier.ticks.ToString();
+            comboText.text = comboMultiplier.totalStreak.ToString();
             if (comboMultiplier.multiplierScale == 1)
             {
                 comboText.color = Color.green;
-
             }
             else if (comboMultiplier.multiplierScale == 2)
             {
@@ -46,7 +49,23 @@ public class ComboUIManager : MonoBehaviour {
         {
             comboText.enabled = false;
         }
+    }
 
-        
+
+    public void AnimateComboUI(int multiplier)
+    {
+        switch (multiplier)
+        {
+            case 1:
+                animator.SetTrigger("SmallTick");
+                break;
+            case 2:
+                animator.SetTrigger("MediumTick");
+                break;
+            case 3:
+                animator.SetTrigger("BigTick");
+                break;
+
+        }
     }
 }

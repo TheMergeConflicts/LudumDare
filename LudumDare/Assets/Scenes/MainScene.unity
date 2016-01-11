@@ -1292,6 +1292,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11484236, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
+      propertyPath: spawnPlatform
+      value: 
+      objectReference: {fileID: 1803789517}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
   m_IsPrefabParent: 0
@@ -2819,6 +2823,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11484236, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
+      propertyPath: spawnPlatform
+      value: 
+      objectReference: {fileID: 1153341456}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
   m_IsPrefabParent: 0
@@ -4078,7 +4086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &926454288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4108,7 +4116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboMultiplier: {fileID: 1814057684}
-  comboText: {fileID: 0}
+  comboText: {fileID: 926454292}
   UIManager: {fileID: 1404258500}
 --- !u!222 &926454290
 CanvasRenderer:
@@ -4997,6 +5005,10 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11484236, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
+      propertyPath: spawnPlatform
+      value: 
+      objectReference: {fileID: 2020629148}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
   m_IsPrefabParent: 0
@@ -7510,6 +7522,7 @@ MonoBehaviour:
   multiplierScale: 1
   maxMultiplierScale: 3
   ticksToNextMultiplier: 2
+  totalStreak: 0
   ticks: 0
 --- !u!1 &1824861432
 GameObject:
@@ -8605,6 +8618,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11484236, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
+      propertyPath: spawnPlatform
+      value: 
+      objectReference: {fileID: 2054928937}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
   m_IsPrefabParent: 0

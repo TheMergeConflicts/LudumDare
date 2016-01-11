@@ -5,17 +5,23 @@ public class ComboMultiplier : MonoBehaviour {
     public int multiplierScale = 1;
     public int maxMultiplierScale = 4;
     public int ticksToNextMultiplier = 5;
+    public int totalStreak;
 
     public int ticks;
+
+    ComboUIManager cUIManager;
 
 
     void Start()
     {
         resetMultiplier();
+        cUIManager = GameObject.FindObjectOfType<ComboUIManager>();
     }
 
 	public void increaseMultiplier()
     {
+        cUIManager.AnimateComboUI(multiplierScale);
+        totalStreak++;
         ticks++;
         if (ticks >= ticksToNextMultiplier)
         {
@@ -25,6 +31,7 @@ public class ComboMultiplier : MonoBehaviour {
 
     void increaseMultiplierScale()
     {
+        
         multiplierScale++;
         if (multiplierScale > maxMultiplierScale)
         {
@@ -37,5 +44,6 @@ public class ComboMultiplier : MonoBehaviour {
     {
         multiplierScale = 1;
         ticks = 0;
+        totalStreak = 0;
     }
 }
