@@ -303,7 +303,7 @@ GameObject:
   - 233: {fileID: 75374783}
   m_Layer: 0
   m_Name: segment (6)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -586,7 +586,7 @@ GameObject:
   - 233: {fileID: 165205962}
   m_Layer: 0
   m_Name: segmentL (12)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -644,7 +644,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 1
 --- !u!212 &165205964
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -750,7 +750,7 @@ GameObject:
   - 233: {fileID: 189980799}
   m_Layer: 0
   m_Name: segment (4)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -853,7 +853,7 @@ GameObject:
   - 233: {fileID: 225023237}
   m_Layer: 0
   m_Name: segment (11)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -958,7 +958,7 @@ GameObject:
   - 251: {fileID: 261491212}
   m_Layer: 8
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,7 +1083,7 @@ GameObject:
   - 233: {fileID: 278821188}
   m_Layer: 0
   m_Name: segment (5)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1719,7 +1719,7 @@ GameObject:
   - 233: {fileID: 454627574}
   m_Layer: 0
   m_Name: segment (7)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2222,7 +2222,7 @@ GameObject:
   - 233: {fileID: 529162183}
   m_Layer: 0
   m_Name: segment (2)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3122,7 +3122,7 @@ GameObject:
   - 233: {fileID: 698051301}
   m_Layer: 0
   m_Name: segment (9)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3225,7 +3225,7 @@ GameObject:
   - 233: {fileID: 710507995}
   m_Layer: 0
   m_Name: segment (7)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3631,7 +3631,7 @@ GameObject:
   - 233: {fileID: 828864827}
   m_Layer: 0
   m_Name: segment (3)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3937,7 +3937,7 @@ GameObject:
   - 233: {fileID: 860797522}
   m_Layer: 0
   m_Name: segment
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4060,6 +4060,112 @@ Transform:
   - {fileID: 1653415595}
   m_Father: {fileID: 1637384140}
   m_RootOrder: 3
+--- !u!1 &926454287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 926454288}
+  - 222: {fileID: 926454290}
+  - 114: {fileID: 926454289}
+  - 95: {fileID: 926454291}
+  - 114: {fileID: 926454292}
+  m_Layer: 5
+  m_Name: ComboUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &926454288
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926454287}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1404258499}
+  m_RootOrder: 6
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 258.3, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &926454289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926454287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c74f22d63c48e641b3f27d9c8387b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboMultiplier: {fileID: 1814057684}
+  comboText: {fileID: 0}
+  UIManager: {fileID: 1404258500}
+--- !u!222 &926454290
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926454287}
+--- !u!95 &926454291
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926454287}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a7fc40defeeac541b462c59316d3933, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &926454292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926454287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 0443a5d849e6d4e489f89d5c83b2c0b2, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 1
 --- !u!4 &988841192 stripped
 Transform:
   m_PrefabParentObject: {fileID: 447342, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
@@ -4177,7 +4283,7 @@ GameObject:
   - 233: {fileID: 1027520836}
   m_Layer: 0
   m_Name: segment (8)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4493,7 +4599,7 @@ GameObject:
   - 233: {fileID: 1174303886}
   m_Layer: 0
   m_Name: segment (5)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4907,7 +5013,7 @@ GameObject:
   - 233: {fileID: 1266373198}
   m_Layer: 0
   m_Name: segment
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5140,7 +5246,7 @@ GameObject:
   - 233: {fileID: 1312500083}
   m_Layer: 0
   m_Name: segment (9)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5301,7 +5407,7 @@ GameObject:
   - 233: {fileID: 1340882097}
   m_Layer: 0
   m_Name: segment (10)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5525,7 +5631,7 @@ GameObject:
   - 233: {fileID: 1402669746}
   m_Layer: 0
   m_Name: segmentR (12)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5583,7 +5689,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 1
 --- !u!212 &1402669748
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5705,6 +5811,7 @@ RectTransform:
   - {fileID: 2056332974}
   - {fileID: 1875184479}
   - {fileID: 618136581}
+  - {fileID: 926454288}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
@@ -5732,6 +5839,7 @@ MonoBehaviour:
   mainMenuPanel: {fileID: 630917577}
   blackCoverPanel: {fileID: 1875184478}
   endPanel: {fileID: 618136580}
+  ComboUI: {fileID: 926454287}
   minionSpawner: {fileID: 1535048845}
   platformManagement: {fileID: 1637384139}
   finalResult: {fileID: 1824861434}
@@ -5750,7 +5858,7 @@ GameObject:
   - 233: {fileID: 1442803811}
   m_Layer: 0
   m_Name: segment (2)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5956,7 +6064,7 @@ GameObject:
   - 233: {fileID: 1463161313}
   m_Layer: 0
   m_Name: segment (1)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6319,7 +6427,7 @@ GameObject:
   - 233: {fileID: 1582002368}
   m_Layer: 0
   m_Name: segment (1)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6530,6 +6638,7 @@ GameObject:
   - 114: {fileID: 1637384139}
   - 82: {fileID: 1637384141}
   - 114: {fileID: 1637384142}
+  - 114: {fileID: 1637384143}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -6561,6 +6670,7 @@ MonoBehaviour:
   leftRopeEnd: {fileID: 860797522}
   rightRopeEnd: {fileID: 1266373198}
   uiManager: {fileID: 1404258500}
+  moveUp: 
 --- !u!4 &1637384140
 Transform:
   m_ObjectHideFlags: 0
@@ -6673,6 +6783,17 @@ MonoBehaviour:
   maxVolume: 0.15
   minPitch: 0.95
   maxPitch: 1.05
+--- !u!114 &1637384143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637384138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36594bb9b6b6d74384e41ca88fc9cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1646938936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6686,7 +6807,7 @@ GameObject:
   - 233: {fileID: 1646938938}
   m_Layer: 0
   m_Name: segment (4)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6816,7 +6937,7 @@ GameObject:
   - 233: {fileID: 1654705033}
   m_Layer: 0
   m_Name: segment (6)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7094,7 +7215,7 @@ GameObject:
   - 233: {fileID: 1714593425}
   m_Layer: 0
   m_Name: segment (8)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7387,8 +7508,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplierScale: 1
-  maxMultiplierScale: 4
-  ticksToNextMultiplier: 5
+  maxMultiplierScale: 3
+  ticksToNextMultiplier: 2
+  ticks: 0
 --- !u!1 &1824861432
 GameObject:
   m_ObjectHideFlags: 0
@@ -7814,7 +7936,7 @@ GameObject:
   - 233: {fileID: 1907461371}
   m_Layer: 0
   m_Name: segment (11)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8783,7 +8905,7 @@ GameObject:
   - 233: {fileID: 2063620106}
   m_Layer: 0
   m_Name: segment (10)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8934,7 +9056,7 @@ GameObject:
   - 233: {fileID: 2119975524}
   m_Layer: 0
   m_Name: segment (3)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

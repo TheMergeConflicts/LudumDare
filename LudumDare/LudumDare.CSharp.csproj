@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ComboUIManager.cs" />
     <Compile Include="Assets\Scripts\AcidSoundPlayer.cs" />
     <Compile Include="Assets\Scripts\BubblePop.cs" />
     <Compile Include="Assets\Scripts\BubbleSpawner.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Scripts\MinionSpawner.cs" />
     <Compile Include="Assets\Scripts\MinionStats.cs" />
     <Compile Include="Assets\Scripts\PlatformManagement.cs" />
+    <Compile Include="Assets\Scripts\PlatformReset.cs" />
     <Compile Include="Assets\Scripts\PlatformScoring.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />

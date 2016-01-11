@@ -14,6 +14,7 @@ public class UImanager : MonoBehaviour {
 	public GameObject mainMenuPanel;
     public GameObject blackCoverPanel;
     public GameObject endPanel;
+    public GameObject ComboUI;
 
     public MinionSpawner minionSpawner;
     public PlatformManagement platformManagement;
@@ -132,6 +133,7 @@ public class UImanager : MonoBehaviour {
 
 	void SetInGameUI(bool state){
 		inGamePanel.SetActive (state);
+        ComboUI.SetActive(state);
 	}
 
 	void SetMainMenuUI(bool state){
@@ -147,6 +149,7 @@ public class UImanager : MonoBehaviour {
 
 	public void StartGame(){
 		currentState = UIState.inGame;
+        
 	}
 
 	public void StartPreGame(){
@@ -157,12 +160,13 @@ public class UImanager : MonoBehaviour {
 	public void StartEndGame(){
 		finalResult.text = "You survived to age" + "\n" + "<size=50>" + finalAge + "</size>";
 		currentState = UIState.endScreen;
-	}
+    }
 
     public void StartEndAnimation()
     {
+
         currentState = UIState.endAnimation;
-        Invoke("StartEndGame", 1.5f);
+        Invoke("StartEndGame", 2f);
     }
 
 	public void StartMainMenu(){
@@ -188,7 +192,7 @@ public class UImanager : MonoBehaviour {
         {
             platformManagement.ResetPlatform();
         }
-		GameObject[] minions = GameObject.FindGameObjectsWithTag ("Minion");
+        GameObject[] minions = GameObject.FindGameObjectsWithTag ("Minion");
 		foreach(GameObject minion in minions){
 			Destroy (minion);
 		}

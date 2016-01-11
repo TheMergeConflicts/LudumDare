@@ -6,9 +6,9 @@ public class PlatformManagement : MonoBehaviour {
     public const int LEFT = 1;
 
     public Transform bridge;
-    private Vector3 startingPos;
-    private Quaternion startingRot;
-    private Vector3 startingScale;
+    //private Vector3 startingPos;
+    //private Quaternion startingRot;
+    //private Vector3 startingScale;
 
     public Transform[] ropeTransforms;
     public Transform[] ropePositions;
@@ -21,26 +21,28 @@ public class PlatformManagement : MonoBehaviour {
     public UImanager uiManager;
 
     SoundManager sManager;
+    Vector3 bridgeOrigin;
 
     int[] currentPositions;
-    bool[] moveUp;
+    public bool[] moveUp;
 
     void Start()
     {
-        RecordBoneInitialTransform();
+        //RecordBoneInitialTransform();
         sManager = GetComponent<SoundManager>();
         moveUp = new bool[ropeTransforms.Length];
         currentPositions = new int[ropePositions.Length];
         isMobile = Application.isMobilePlatform;
+        
 
     }
 
-    void RecordBoneInitialTransform()
-    {
-        startingPos = bridge.localPosition;
-        startingRot = bridge.localRotation;
-        startingScale = bridge.localScale;
-    }
+    //void RecordBoneInitialTransform()
+    //{
+    //    startingPos = bridge.localPosition;
+    //    startingRot = bridge.localRotation;
+    //    startingScale = bridge.localScale;
+    //}
 
     void Update()
     {	
@@ -110,7 +112,7 @@ public class PlatformManagement : MonoBehaviour {
         rope.position = Vector3.MoveTowards(rope.position, goal, Time.deltaTime * ropeSpeed);
     }
 
-    void moveRope(int id)
+    public void moveRope(int id)
     {
         sManager.setRandomClip();
         sManager.setRandomPitch();
@@ -145,6 +147,7 @@ public class PlatformManagement : MonoBehaviour {
 
     public void ResetPlatform()
     {
+        /*
         for (int i = 0; i < moveUp.Length; i++)
         {
             if (!moveUp[i])
@@ -155,7 +158,12 @@ public class PlatformManagement : MonoBehaviour {
         bridge.localPosition = startingPos;
         bridge.localRotation = startingRot;
         bridge.localScale = startingScale;
+        */
+
         leftRopeEnd.enabled = true;
         rightRopeEnd.enabled = true;
+        currentPositions[0] = 0;
+        currentPositions[1] = 0;
+        GetComponent<PlatformReset>().resetToOrigin();
     }
 }

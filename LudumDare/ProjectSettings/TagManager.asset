@@ -9,6 +9,7 @@ TagManager:
   - Acid
   - Victory
   - Combo
+  - Platform
   layers:
   - Default
   - TransparentFX

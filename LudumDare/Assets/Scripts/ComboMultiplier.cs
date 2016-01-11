@@ -6,7 +6,7 @@ public class ComboMultiplier : MonoBehaviour {
     public int maxMultiplierScale = 4;
     public int ticksToNextMultiplier = 5;
 
-    int ticks;
+    public int ticks;
 
 
     void Start()
