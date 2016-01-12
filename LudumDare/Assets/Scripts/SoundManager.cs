@@ -50,8 +50,22 @@ public class SoundManager : MonoBehaviour {
 
     public void playSound()
     {
-        aSource.Stop();
+        stopSound();
         aSource.Play();
+    }
+
+    public void stopSound()
+    {
+        aSource.Stop();
+    }
+
+    public void playRandomSound()
+    {
+       
+        setRandomClip();
+        setRandomPitch();
+        setRandomVolume();
+        playSound();
     }
 
     public void playSoundDelay(float timeForDelay)
