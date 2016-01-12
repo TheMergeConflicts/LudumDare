@@ -9,13 +9,13 @@ public class ComboMultiplier : MonoBehaviour {
 
     public int ticks;
 
-    ComboUIManager cUIManager;
+    public ComboUIManager cUIManager;
 
 
     void Start()
     {
         resetMultiplier();
-        cUIManager = GameObject.FindObjectOfType<ComboUIManager>();
+        //cUIManager = GameObject.FindObjectOfType<ComboUIManager>();
     }
 
 	public void increaseMultiplier()

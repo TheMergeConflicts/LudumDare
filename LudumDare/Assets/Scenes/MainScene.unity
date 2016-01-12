@@ -4101,7 +4101,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 258.3, y: 0}
+  m_AnchoredPosition: {x: 258.3, y: -49.7}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926454289
@@ -7524,6 +7524,7 @@ MonoBehaviour:
   ticksToNextMultiplier: 2
   totalStreak: 0
   ticks: 0
+  cUIManager: {fileID: 926454289}
 --- !u!1 &1824861432
 GameObject:
   m_ObjectHideFlags: 0
