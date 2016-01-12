@@ -77,7 +77,13 @@ public class UImanager : MonoBehaviour {
             SetPreGameUI(false);
             SetEndGameUI(false);
             SetEndAnimationUI(true);
+            blackCoverPanel.GetComponent<AudioSource>().Stop();
+            blackCoverPanel.GetComponent<AudioSource>().Play();
+
             blackCoverPanel.GetComponent<Animator>().SetTrigger("fadeIn");
+
+
+
             platformManagement.DetachRope();
             minionSpawner.EndSpawningMinions();
         }
