@@ -6,6 +6,8 @@ public class MinionSpawner : MonoBehaviour {
     public SpawnStats[] spawners;
     public float respawnTimeMin;
 
+    BalanceScript balanceScript;
+
     bool spawning;
     float initMin;
     public float respawnTimeMax;
@@ -19,6 +21,7 @@ public class MinionSpawner : MonoBehaviour {
         restartTimer();
         initMin = respawnTimeMin;
         initMax = respawnTimeMax;
+        balanceScript = GetComponent<BalanceScript>();
     }
 
     public void resetRespawnTime()
@@ -40,11 +43,12 @@ public class MinionSpawner : MonoBehaviour {
 
     void createMinion()
     {
-        SpawnStats sStats = spawners[Random.Range(0, spawners.Length)];
+        balanceScript.rollChance();
+        SpawnStats sStats = spawners[balanceScript.getLastSpawnPosition()];
         GameObject obj = (GameObject)Instantiate(minions[Random.Range(0, minions.Length)], sStats.transform.position, new Quaternion());
         MinionStats mStats = obj.GetComponent<MinionStats>();
         mStats.direction = sStats.direction;
-        mStats.setGoalDown();
+        mStats.setGoalDown(balanceScript.getMinionDown());
         mStats.initialSpawn = sStats.spawnPlatform;
     
         if (mStats.goalDown)

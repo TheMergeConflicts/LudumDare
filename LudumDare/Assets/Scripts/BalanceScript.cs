@@ -1,100 +1,170 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
 public class BalanceScript : MonoBehaviour {
     public const int RED = 0;
     public const int GREEN = 1;
-    public const int YELLOW = 2;
-    public const int BLUE = 3;
+    public const int BLUE = 2;
+    public const int YELLOW = 3;
+
+    public int rollStack = 10;
+
+    int[] previousRolls;
+    int currentRollPosition;
+
+    float[] spawnWeights = new float[8];
+    
 
 
-    public float[] weightChance = new float[8];
-    int lastRoll;
-
-    /// <summary>
-    /// This method will adjust the likelyhood that a spawner of a certain color will spawn a minion.
-    /// </summary>
-    /// <param name="scale"></param>
-    /// <param name="color"></param>
-    public void adjustSpawnerWeight(float scale, int color)
+    void Start()
     {
-        weightChance[color * 2] *= scale;
-        weightChance[color * 2 + 1] *= scale;
-        normalizeChance();
+        initializePreviousRollStack();
+        resetSpawnWeights();
+        currentRollPosition = previousRolls.Length - 1;
     }
 
-    /// <summary>
-    /// This method is used for to adjust the likelyhood that a minion of a certain color will respawn
-    /// </summary>
-    /// <param name="scale"></param>
-    /// <param name="color"></param>
-    public void adjustMinionSpawnWeight(float scale, int color)
+    void Update()
     {
-        int changeSlot = color / 2;
-        if (color % 2 == 0)
-        {
-            changeSlot += 2;
-        }
-        weightChance[changeSlot] *= scale;
-        weightChance[changeSlot + 4] *= scale;
-        normalizeChance();
     }
 
-    public int rollChance()
+    public void rollChance()
     {
-        float randVal = Random.Range(0f, 1f);
+        float randChance = Random.Range(0f, 1f);
         float min = 0;
-        float max = weightChance[0];
-        int i = 0;
-        foreach(float f in weightChance)
+        float max = 0;
+        for (int i = 0; i < spawnWeights.Length; i++)
         {
-            if (randVal >= min && randVal <= max)
+            max += spawnWeights[i];
+            if (randChance >= min && randChance <= max)
             {
-                lastRoll = i;
-                return i;
+                addNewRoll(i);
+                break;
             }
-            i++;
             min = max;
-            max = weightChance[i];
         }
-        lastRoll = -1;
-        return -1;
+        balanceWeights();
     }
 
-    public int getColorSpawn()
+    public void normalizeWeights()
     {
-        return lastRoll / 2;
-    }
+        float mag = 0;
 
-    public bool getMinionUp()
-    {
-        return lastRoll % 2 == 0;
-    }
-
-    public void resetChance()
-    {
-        for(int i = 0; i < weightChance.Length; i++)
+        foreach(float f in spawnWeights)
         {
-            weightChance[i] = 1;
+            mag += Mathf.Pow(f, 2);
         }
+        mag = Mathf.Sqrt(mag);
 
-        normalizeChance();
+        for (int i = 0; i < spawnWeights.Length; i++)
+        {
+            spawnWeights[i] /= mag;
+        }
     }
 
-    void normalizeChance()
+    public int getAdjacentColor (int color)
     {
-        float total = 0;
-        foreach (float f in weightChance)
+        return (color + 2) % 4;
+    }
+
+    public bool getMinionDown()
+    {
+        return previousRolls[currentRollPosition] % 2 != 0;
+    }
+
+    void scaleMinionColorWeight()
+    {
+
+    }
+
+    void balanceWeights()
+    {
+
+    }
+
+    public int getLastSpawnPosition()
+    {
+        return previousRolls[currentRollPosition] / 2;
+    }
+
+    int convertRollToMinionColor(int i)
+    {
+        int checkVal = i % 4;
+        if (checkVal == 0)
         {
-            total += Mathf.Pow(f, 2);
+            return 1;
         }
-
-        int i = 0;
-
-        foreach (float f in weightChance)
+        else if (checkVal == 1)
         {
-            weightChance[i] = f / total;
-            i++;
+            return 3;
+        }
+        else if (checkVal == 2)
+        {
+            return 0;
+        }
+        return 2;
+    }
+
+    //======================================================================================================
+
+    void addNewRoll(int i)
+    {
+        currentRollPosition = (currentRollPosition + 1) % previousRolls.Length;
+        previousRolls[currentRollPosition] = i;
+    }
+
+    void resetSpawnWeights()
+    {
+        for (int i = 0; i < spawnWeights.Length; i++)
+        {
+            spawnWeights[i] = Mathf.Pow(spawnWeights.Length, -1);
         }
     }
+
+    void initializePreviousRollStack()
+    {
+        if (rollStack <= 0)
+        {
+            previousRolls = new int[10];
+        }
+        else
+        {
+            previousRolls = new int[rollStack];
+        }
+
+
+        for (int i = 0; i < previousRolls.Length; i++)
+        {
+            previousRolls[i] = -1;
+        }
+    }
+
+    float[] getColorFrequency()
+    {
+        float[] colorFreq = new float[4];
+        int length = 0;
+        for (int i = 0; i < previousRolls.Length; i++)
+        {
+            if (previousRolls[i] > -1)
+            {
+                colorFreq[convertRollToMinionColor(previousRolls[i])]++;
+            }
+            else
+            {
+                break;
+            }
+            length++;
+        }
+
+        if (length == 0)
+        {
+            return colorFreq;
+        }
+        for (int i = 0; i < colorFreq.Length; i++)
+        {
+            colorFreq[i] /= length;   
+        }
+        return colorFreq;
+    }
+
 }

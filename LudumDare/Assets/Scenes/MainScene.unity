@@ -6309,6 +6309,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1535048844}
   - 114: {fileID: 1535048845}
+  - 114: {fileID: 1535048846}
   m_Layer: 0
   m_Name: Stage
   m_TagString: Spawner
@@ -6355,6 +6356,18 @@ MonoBehaviour:
   - {fileID: 496048196}
   respawnTimeMin: 1
   respawnTimeMax: 5
+--- !u!114 &1535048846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1535048843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad42dafcee5d37c438133c0bdf1798a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollStack: 2
 --- !u!4 &1551502241 stripped
 Transform:
   m_PrefabParentObject: {fileID: 447342, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}

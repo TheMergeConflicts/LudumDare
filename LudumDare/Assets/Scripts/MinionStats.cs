@@ -25,8 +25,8 @@ public class MinionStats : MonoBehaviour {
         render.color = colors[goal.id];
     }
 
-    public void setGoalDown()
+    public void setGoalDown(bool isDown)
     {
-        goalDown = Random.Range(0f, 1f) > .5f;
+        this.goalDown = isDown;
     }
 }
