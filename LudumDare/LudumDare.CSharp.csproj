@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\BubbleSpawner.cs" />
     <Compile Include="Assets\Scripts\ComboMultiplier.cs" />
     <Compile Include="Assets\Scripts\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\DyingSoundScript.cs" />
     <Compile Include="Assets\Scripts\FallDamage.cs" />
     <Compile Include="Assets\Scripts\MinionAcidLogic.cs" />
     <Compile Include="Assets\Scripts\MinionMovement.cs" />

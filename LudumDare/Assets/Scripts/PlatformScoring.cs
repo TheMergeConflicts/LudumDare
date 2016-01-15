@@ -24,7 +24,7 @@ public class PlatformScoring : MonoBehaviour {
             {
                
                 playerStats.updateHealth(mStats.healthPoints);
-                //increaseHealthUI.SetTrigger("Increase");
+                increaseHealthUI.SetTrigger("Increase");
             }
 
             //Destroy(mStats.gameObject);

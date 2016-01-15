@@ -8093,6 +8093,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1888302421}
   - 82: {fileID: 1888302422}
+  - 114: {fileID: 1888302423}
   m_Layer: 0
   m_Name: DyingSound
   m_TagString: Untagged
@@ -8120,9 +8121,10 @@ AudioSource:
   m_GameObject: {fileID: 1888302420}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  OutputAudioMixerGroup: {fileID: 24381578, guid: 736d49e935ae29f4894586decc766196,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: be78912a6c1480e4d9bcfc2463b50cb8, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -8186,6 +8188,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1888302423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888302420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aaddebb2b2e7ec44aae85de54baaeac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenBlips: 1.2
+  lowHealthValue: 25
 --- !u!1 &1899197789
 GameObject:
   m_ObjectHideFlags: 0
