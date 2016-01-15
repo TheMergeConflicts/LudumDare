@@ -19,7 +19,7 @@ public class DyingSoundScript : MonoBehaviour {
 
     void Update()
     {
-        if (checkDyingSoundActive())
+        if (checkDyingSoundActive() && playerStats.health > 0)
         {
             blipTimer = Mathf.MoveTowards(blipTimer, 0, Time.deltaTime);
             if (blipTimer <= 0)
@@ -30,6 +30,7 @@ public class DyingSoundScript : MonoBehaviour {
         }
         else
         {
+            aSource.Stop();
             resetTimer();
         }
     }
