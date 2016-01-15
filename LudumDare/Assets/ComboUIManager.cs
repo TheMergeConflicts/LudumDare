@@ -54,6 +54,7 @@ public class ComboUIManager : MonoBehaviour {
 
     public void AnimateComboUI(int multiplier)
     {
+        /*
         switch (multiplier)
         {
             case 1:
@@ -67,5 +68,6 @@ public class ComboUIManager : MonoBehaviour {
                 break;
 
         }
+        */
     }
 }
