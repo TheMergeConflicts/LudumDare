@@ -4,10 +4,10 @@ using System.Collections;
 public class SoundManager : MonoBehaviour {
     public AudioSource aSource;
     public AudioClip[] aClips;
-    public float minVolume;
-    public float maxVolume;
-    public float minPitch;
-    public float maxPitch;
+    public float minVolume = .9f;
+    public float maxVolume = 1;
+    public float minPitch = .95f;
+    public float maxPitch = 1.05f;
 
     bool playDelayed;
     float playDelayTimer;
@@ -18,6 +18,10 @@ public class SoundManager : MonoBehaviour {
         {
             aSource = GetComponent<AudioSource>();
         }
+
+        aSource.pitch = maxPitch;
+        aSource.volume = maxVolume;
+        aSource.clip = aClips[0];
     }
 
     void Update()
@@ -30,6 +34,18 @@ public class SoundManager : MonoBehaviour {
                 playSound();
                 playDelayed = false;
             }
+        }
+    }
+
+    public void setClip(int i)
+    {
+        if (i < 0 || i >= aClips.Length)
+        {
+            aSource.clip = aClips[0];
+        }
+        else
+        {
+            aSource.clip = aClips[i];
         }
     }
 

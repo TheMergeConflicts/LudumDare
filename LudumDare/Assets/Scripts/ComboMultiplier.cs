@@ -2,6 +2,11 @@
 using System.Collections;
 
 public class ComboMultiplier : MonoBehaviour {
+    public const int comboIncreaseLow = 0;
+    public const int comboIncreaseHigh = 1;
+    public const int comboBreakLow = 2;
+    public const int comboBreakHigh = 3;
+
     public int multiplierScale = 1;
     public int maxMultiplierScale = 4;
     public int ticksToNextMultiplier = 5;
@@ -11,6 +16,10 @@ public class ComboMultiplier : MonoBehaviour {
 
     public ComboUIManager cUIManager;
 
+    public SoundManager comboSounds;
+
+    public int lowComboValue = 5;
+    public int highComboValue = 10;
 
     void Start()
     {
@@ -26,6 +35,34 @@ public class ComboMultiplier : MonoBehaviour {
         if (ticks >= ticksToNextMultiplier)
         {
             increaseMultiplierScale();
+        }
+    }
+
+    void playComboIncreaseSound()
+    {
+        if (multiplierScale >= highComboValue)
+        {
+            comboSounds.setClip(comboIncreaseHigh);
+            comboSounds.playSound();
+        }
+        else if (multiplierScale >= lowComboValue)
+        {
+            comboSounds.setClip(comboIncreaseLow);
+            comboSounds.playSound();
+        }
+    }
+
+    void playComboBreakSound()
+    {
+        if (multiplierScale >= highComboValue)
+        {
+            comboSounds.setClip(comboBreakHigh);
+            comboSounds.playSound();
+        }
+        else if (multiplierScale >= lowComboValue)
+        {
+            comboSounds.setClip(comboBreakLow);
+            comboSounds.playSound();
         }
     }
 
