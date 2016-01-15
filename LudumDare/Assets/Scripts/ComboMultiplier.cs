@@ -24,11 +24,13 @@ public class ComboMultiplier : MonoBehaviour {
     void Start()
     {
         resetMultiplier();
+        comboSounds = GetComponentInChildren<SoundManager>();
         //cUIManager = GameObject.FindObjectOfType<ComboUIManager>();
     }
 
 	public void increaseMultiplier()
     {
+        playComboIncreaseSound();
         cUIManager.AnimateComboUI(multiplierScale);
         totalStreak++;
         ticks++;
@@ -79,6 +81,7 @@ public class ComboMultiplier : MonoBehaviour {
 
     public void resetMultiplier()
     {
+        playComboBreakSound();
         multiplierScale = 1;
         ticks = 0;
         totalStreak = 0;

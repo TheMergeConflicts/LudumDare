@@ -4243,7 +4243,7 @@ MonoBehaviour:
   comboMultiplier: {fileID: 1814057684}
   comboText: {fileID: 926454292}
   UIManager: {fileID: 1404258500}
-  animator: {fileID: 926454291}
+  animator: {fileID: 0}
 --- !u!222 &926454290
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7666,8 +7666,8 @@ MonoBehaviour:
   ticks: 0
   cUIManager: {fileID: 926454289}
   comboSounds: {fileID: 0}
-  lowComboValue: 5
-  highComboValue: 10
+  lowComboValue: 2
+  highComboValue: 4
 --- !u!1 &1824861432
 GameObject:
   m_ObjectHideFlags: 0
