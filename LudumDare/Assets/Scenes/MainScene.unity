@@ -4243,6 +4243,7 @@ MonoBehaviour:
   comboMultiplier: {fileID: 1814057684}
   comboText: {fileID: 926454292}
   UIManager: {fileID: 1404258500}
+  animator: {fileID: 926454291}
 --- !u!222 &926454290
 CanvasRenderer:
   m_ObjectHideFlags: 0

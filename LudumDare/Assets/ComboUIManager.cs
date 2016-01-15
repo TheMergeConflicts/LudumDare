@@ -8,10 +8,10 @@ public class ComboUIManager : MonoBehaviour {
     public Text comboText;
     public UImanager UIManager;
 
-    Animator animator;
+    public Animator animator;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
     }
@@ -54,20 +54,21 @@ public class ComboUIManager : MonoBehaviour {
 
     public void AnimateComboUI(int multiplier)
     {
-        /*
-        switch (multiplier)
+        if (UIManager.currentState == UImanager.UIState.inGame)
         {
-            case 1:
-                animator.SetTrigger("SmallTick");
-                break;
-            case 2:
-                animator.SetTrigger("MediumTick");
-                break;
-            case 3:
-                animator.SetTrigger("BigTick");
-                break;
+            switch (multiplier)
+            {
+                case 1:
+                    animator.SetTrigger("SmallTick");
+                    break;
+                case 2:
+                    animator.SetTrigger("MediumTick");
+                    break;
+                case 3:
+                    animator.SetTrigger("BigTick");
+                    break;
 
+            }
         }
-        */
     }
 }
