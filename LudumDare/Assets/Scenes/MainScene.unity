@@ -6494,6 +6494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rollStack: 2
+  balanceScale: 0.5
 --- !u!4 &1551502241 stripped
 Transform:
   m_PrefabParentObject: {fileID: 447342, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}

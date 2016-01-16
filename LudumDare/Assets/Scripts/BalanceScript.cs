@@ -10,6 +10,8 @@ public class BalanceScript : MonoBehaviour {
 
     public int rollStack = 10;
 
+    public float balanceScale;
+
     int[] previousRolls;
     int currentRollPosition;
 
@@ -46,20 +48,22 @@ public class BalanceScript : MonoBehaviour {
         balanceWeights();
     }
 
-    public void normalizeWeights()
+    public float[] normalizeWeights(float[] arr)
     {
-        float mag = 0;
-
-        foreach(float f in spawnWeights)
+        float[] normalWeight = new float[arr.Length];
+        float total = 0;
+        foreach (float f in arr)
         {
-            mag += Mathf.Pow(f, 2);
+            total += f;
         }
-        mag = Mathf.Sqrt(mag);
 
-        for (int i = 0; i < spawnWeights.Length; i++)
+        for (int i = 0; i < normalWeight.Length; i++)
         {
-            spawnWeights[i] /= mag;
+            normalWeight[i] = arr[i] / total;
         }
+
+
+        return normalWeight;
     }
 
     public int getAdjacentColor (int color)
@@ -72,14 +76,23 @@ public class BalanceScript : MonoBehaviour {
         return previousRolls[currentRollPosition] % 2 != 0;
     }
 
-    void scaleMinionColorWeight()
+    void scaleMinionColorWeight(int color, float scale)
     {
-
+        int slot = convertMinionColorToRoll(color);
+        spawnWeights[slot] *= scale;
+        spawnWeights[slot + 4] *= scale;
     }
 
     void balanceWeights()
     {
-
+        float[] colorFreq = getColorFrequency();
+        resetSpawnWeights();
+        for (int i = 0; i < colorFreq.Length; i++)
+        {
+            scaleMinionColorWeight(getAdjacentColor(i), (1 - colorFreq[i]) * balanceScale);
+        }
+        spawnWeights = normalizeWeights(spawnWeights);
+        
     }
 
     public int getLastSpawnPosition()
@@ -103,6 +116,23 @@ public class BalanceScript : MonoBehaviour {
             return 0;
         }
         return 2;
+    }
+
+    int convertMinionColorToRoll(int color)
+    {
+        if (color == 0)
+        {
+            return 2;
+        }
+        if (color == 1)
+        {
+            return 0;
+        }
+        if (color == 2)
+        {
+            return 3;
+        }
+        return 1;
     }
 
     //======================================================================================================
