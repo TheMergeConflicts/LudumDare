@@ -89,7 +89,7 @@ public class BalanceScript : MonoBehaviour {
         resetSpawnWeights();
         for (int i = 0; i < colorFreq.Length; i++)
         {
-            scaleMinionColorWeight(getAdjacentColor(i), (1 - colorFreq[i]) * balanceScale);
+            scaleMinionColorWeight(getAdjacentColor(i), 1 - (colorFreq[i] * balanceScale));
         }
         spawnWeights = normalizeWeights(spawnWeights);
         

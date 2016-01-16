@@ -9,17 +9,19 @@ public class DyingSoundScript : MonoBehaviour {
     float blipTimer;
     PlayerStats playerStats;
     AudioSource aSource;
+    UImanager uiManager;
 
     void Start()
     {
         aSource = GetComponent<AudioSource>();
         playerStats = transform.parent.GetComponent<PlayerStats>();
         resetTimer();
+        uiManager = GameObject.FindObjectOfType<UImanager>();
     }
 
     void Update()
     {
-        if (checkDyingSoundActive() && playerStats.health > 0)
+        if (checkDyingSoundActive() && uiManager.currentState == UImanager.UIState.inGame)
         {
             blipTimer = Mathf.MoveTowards(blipTimer, 0, Time.deltaTime);
             if (blipTimer <= 0)
