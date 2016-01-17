@@ -45,16 +45,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ComboUIManager.cs" />
+     <Compile Include="Assets\PlayerHealthUI.cs" />
      <Compile Include="Assets\Scripts\AcidSoundPlayer.cs" />
+     <Compile Include="Assets\Scripts\BalanceScript.cs" />
      <Compile Include="Assets\Scripts\BubblePop.cs" />
      <Compile Include="Assets\Scripts\BubbleSpawner.cs" />
+     <Compile Include="Assets\Scripts\ComboMultiplier.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
+     <Compile Include="Assets\Scripts\DyingSoundScript.cs" />
      <Compile Include="Assets\Scripts\FallDamage.cs" />
      <Compile Include="Assets\Scripts\MinionAcidLogic.cs" />
      <Compile Include="Assets\Scripts\MinionMovement.cs" />
      <Compile Include="Assets\Scripts\MinionSpawner.cs" />
      <Compile Include="Assets\Scripts\MinionStats.cs" />
      <Compile Include="Assets\Scripts\PlatformManagement.cs" />
+     <Compile Include="Assets\Scripts\PlatformReset.cs" />
      <Compile Include="Assets\Scripts\PlatformScoring.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />

@@ -23,6 +23,8 @@ public class UImanager : MonoBehaviour {
 
     public Animator healthBarAnim;
 
+
+
 	public int finalAge;
 
 	PlayerStats playerStats;

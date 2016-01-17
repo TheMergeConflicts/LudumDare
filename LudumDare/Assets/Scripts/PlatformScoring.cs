@@ -6,7 +6,13 @@ public class PlatformScoring : MonoBehaviour {
     public int id;
     public Animator increaseHealthUI;
 
+
+	UImanager UImanager;
     PlayerStats playerStats;
+
+	void Awake(){
+		UImanager = GameObject.FindGameObjectWithTag ("UIManager").GetComponent<UImanager> ();
+	}
 
     void Start()
     {
@@ -17,12 +23,11 @@ public class PlatformScoring : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collider)
     {
         MinionStats mStats = collider.GetComponent<MinionStats>();
-        if (mStats != null)
+		if (mStats != null && UImanager.currentState == UImanager.UIState.inGame)
         {
             
             if (mStats.goal.id == id)
-            {
-               
+			{
                 playerStats.updateHealth(mStats.healthPoints);
                 increaseHealthUI.SetTrigger("Increase");
             }

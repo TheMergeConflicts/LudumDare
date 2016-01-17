@@ -10,6 +10,7 @@ TagManager:
   - Victory
   - Combo
   - Platform
+  - UIManager
   layers:
   - Default
   - TransparentFX

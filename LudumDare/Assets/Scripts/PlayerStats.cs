@@ -36,6 +36,9 @@ public class PlayerStats : MonoBehaviour {
 			updateAge();
 		}
 
+		//Health Alarm
+
+
 		if(health <= 0f && UImanager.currentState == UImanager.UIState.inGame){
 			UImanager.finalAge = age;
 			UImanager.StartEndAnimation ();
