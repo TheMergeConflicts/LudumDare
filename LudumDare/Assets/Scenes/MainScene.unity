@@ -1849,7 +1849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5568628, g: 0.8352941, b: 1, a: 0.27450982}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2057,7 +2057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &470507111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3087,7 +3087,7 @@ RectTransform:
   m_Father: {fileID: 315656678}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4313,7 +4313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &926454288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4345,6 +4345,7 @@ MonoBehaviour:
   comboMultiplier: {fileID: 1814057684}
   comboText: {fileID: 926454292}
   UIManager: {fileID: 1404258500}
+  text_alpha: 0
   animator: {fileID: 0}
 --- !u!222 &926454290
 CanvasRenderer:
@@ -6286,11 +6287,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1451070090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.46858957, y: -1.35, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1535048844}
+  m_RootOrder: 7
 --- !u!1 &1463161311
 GameObject:
   m_ObjectHideFlags: 0
@@ -6490,8 +6491,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 994647536}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6562,6 +6563,7 @@ Transform:
   - {fileID: 1299363931}
   - {fileID: 91218641}
   - {fileID: 1690794602}
+  - {fileID: 1451070092}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &1535048845
@@ -7751,7 +7753,7 @@ Transform:
   m_Children:
   - {fileID: 116208791}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!114 &1814057684
 MonoBehaviour:
   m_ObjectHideFlags: 0

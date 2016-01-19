@@ -66,6 +66,8 @@ public class ComboMultiplier : MonoBehaviour {
             comboSounds.setVolume(0.9f);
             comboSounds.playSoundDelay(0.5f);
         }
+
+        cUIManager.AnimateComboUIBreak();
     }
 
     void increaseMultiplierScale()
