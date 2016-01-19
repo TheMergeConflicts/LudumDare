@@ -31,7 +31,7 @@ public class ComboUIManager : MonoBehaviour {
         AssignAlpha();
         if (comboMultiplier.totalStreak > 0)
         {
-            text_alpha = 1f;
+            
             comboText.text = comboMultiplier.totalStreak.ToString();
             comboText.enabled = true;
             
@@ -68,25 +68,39 @@ public class ComboUIManager : MonoBehaviour {
 
     public void AnimateComboUI(int multiplier)
     {
-        if (UIManager.currentState == UImanager.UIState.inGame && !animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.ComboUI_break"))
+        if (UIManager.currentState == UImanager.UIState.inGame)
         {
-            Reset();
-            switch (multiplier)
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.ComboUI_break"))
             {
-                case 1:
-                    animator.SetTrigger("SmallTick");
-                    Invoke("Reset", 0.5f);
-                    break;
-                case 2:
-                    animator.SetTrigger("MediumTick");
-                    Invoke("Reset", 0.5f);
-                    break;
-                case 3:
-                    animator.SetTrigger("BigTick");
-                    Invoke("Reset", 0.5f);
-                    break;
+                Debug.Log("2 animations");
 
             }
+            else
+            {
+                
+                Reset();
+                //text_alpha = 1f;
+                switch (multiplier)
+                {
+                    case 1:
+                        animator.ResetTrigger("SmallTick");
+                        animator.SetTrigger("SmallTick");
+                        Invoke("Reset", 0.5f);
+                        break;
+                    case 2:
+                        animator.ResetTrigger("MediumTick");
+                        animator.SetTrigger("MediumTick");
+                        Invoke("Reset", 0.5f);
+                        break;
+                    case 3:
+                        animator.ResetTrigger("BigTick");
+                        animator.SetTrigger("BigTick");
+                        Invoke("Reset", 0.5f);
+                        break;
+
+                }
+            }
+            
         }
     }
 
@@ -99,9 +113,11 @@ public class ComboUIManager : MonoBehaviour {
 
     public void AnimateComboUIBreak()
     {
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.ComboUI_break"))
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.ComboUI_break") && comboMultiplier.totalStreak > 0)
         {
             Reset();
+            //animator.Stop();
+            animator.ResetTrigger("Break");
             animator.SetTrigger("Break");
             Invoke("DisableText", 1f);
             Invoke("Reset", 1f);
@@ -121,7 +137,7 @@ public class ComboUIManager : MonoBehaviour {
         scale.x = 2f;
         scale.y = 2f;
 
-        text_alpha = 1f;
+        //text_alpha = 1f;
 
         GetComponent<RectTransform>().localScale = scale;
     }
