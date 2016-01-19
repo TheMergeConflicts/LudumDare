@@ -47,13 +47,13 @@ public class ComboMultiplier : MonoBehaviour {
         {
             comboSounds.setClip(comboIncreaseHigh);
             comboSounds.setVolume(0.7f);
-            comboSounds.playSound();
+            comboSounds.playSoundDelay(0.5f);
         }
         else if (multiplierScale >= lowComboValue)
         {
             comboSounds.setClip(comboIncreaseLow);
             comboSounds.setVolume(0.85f);
-            comboSounds.playSound();
+            comboSounds.playSoundDelay(0.5f);
         }
     }
 
@@ -64,7 +64,7 @@ public class ComboMultiplier : MonoBehaviour {
         {
             comboSounds.setClip(comboBreakLow);
             comboSounds.setVolume(0.9f);
-            comboSounds.playSound();
+            comboSounds.playSoundDelay(0.5f);
         }
     }
 
