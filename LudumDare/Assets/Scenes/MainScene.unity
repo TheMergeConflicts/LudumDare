@@ -6578,10 +6578,10 @@ MonoBehaviour:
   minions:
   - {fileID: 185298, guid: 9db40cffcc6bda04ebeac5d5f30374e1, type: 2}
   spawners:
-  - {fileID: 794995775}
   - {fileID: 517922764}
-  - {fileID: 1179366204}
+  - {fileID: 794995775}
   - {fileID: 496048196}
+  - {fileID: 1179366204}
   respawnTimeMin: 1
   respawnTimeMax: 5
 --- !u!114 &1535048846
