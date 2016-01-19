@@ -18,8 +18,8 @@ public class ComboMultiplier : MonoBehaviour {
 
     public SoundManager comboSounds;
 
-    public int lowComboValue = 5;
-    public int highComboValue = 10;
+    public int lowComboValue = 1;
+    public int highComboValue = 4;
 
     void Start()
     {
@@ -42,35 +42,34 @@ public class ComboMultiplier : MonoBehaviour {
 
     void playComboIncreaseSound()
     {
-        if (multiplierScale >= highComboValue)
+        comboSounds.setPitch(1.0f + totalStreak / 30.0f);
+        if (totalStreak >= highComboValue)
         {
             comboSounds.setClip(comboIncreaseHigh);
+            comboSounds.setVolume(0.7f);
             comboSounds.playSound();
         }
         else if (multiplierScale >= lowComboValue)
         {
             comboSounds.setClip(comboIncreaseLow);
+            comboSounds.setVolume(0.85f);
             comboSounds.playSound();
         }
     }
 
     void playComboBreakSound()
     {
-        if (multiplierScale >= highComboValue)
-        {
-            comboSounds.setClip(comboBreakHigh);
-            comboSounds.playSound();
-        }
-        else if (multiplierScale >= lowComboValue)
+        comboSounds.setPitch(1);
+        if (totalStreak >= lowComboValue)
         {
             comboSounds.setClip(comboBreakLow);
+            comboSounds.setVolume(0.9f);
             comboSounds.playSound();
         }
     }
 
     void increaseMultiplierScale()
     {
-        
         multiplierScale++;
         if (multiplierScale > maxMultiplierScale)
         {

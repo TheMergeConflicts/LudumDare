@@ -59,6 +59,16 @@ public class SoundManager : MonoBehaviour {
         aSource.pitch = Random.Range(minPitch, maxPitch);
     }
 
+    public void setPitch(float pitch)
+    {
+        aSource.pitch = pitch;
+    }
+
+    public void setVolume(float vol)
+    {
+        aSource.volume = vol;
+    }
+
     public void setRandomVolume()
     {
         aSource.volume = Random.Range(minVolume, maxVolume);
