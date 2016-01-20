@@ -158,8 +158,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/lipei_000/Desktop/Projects/Unity Projects/LudumDare/LudumDare/user.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/lipei_000/Desktop/OutOfHandGames.keystore
+  AndroidKeyaliasName: outofhandreleasekey
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
