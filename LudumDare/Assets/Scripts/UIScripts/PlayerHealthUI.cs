@@ -38,8 +38,15 @@ public class PlayerHealthUI : MonoBehaviour {
 				}
 			}
 			if(playerStats.health < 30f && shakeReady){
-				HealthUIAnimator.SetTrigger ("Shake");
-				shakeReady = false;
+                if (playerStats.health > 0f)
+                {
+                    HealthUIAnimator.SetTrigger("Shake");
+                    shakeReady = false;
+                }
+                else
+                {
+                    HealthUIAnimator.ResetTrigger("Shake");
+                }
 			}
 		}
 	}

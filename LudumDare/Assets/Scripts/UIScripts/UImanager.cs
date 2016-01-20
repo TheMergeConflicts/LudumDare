@@ -32,6 +32,7 @@ public class UImanager : MonoBehaviour {
 	Animator rightTutorialAnim;
 	bool leftSet;
 	bool rightSet;
+    bool tutorial_ready;
 
 	// Use this for initialization
 	void Start () {
@@ -97,37 +98,54 @@ public class UImanager : MonoBehaviour {
 			SetEndGameUI (false);
             minionSpawner.EndSpawningMinions();
             //Mobile
-            foreach (Touch touch in Input.touches){
-				if(touch.phase == TouchPhase.Ended){
-					//Left Touch
-					if (touch.position.x < Screen.width / 2f) {
-						leftSet = true;
-						leftTutorialAnim.SetTrigger ("fadeOut");
-					}
-					//Right Touch
-					else {
-						rightSet = true;
-						rightTutorialAnim.SetTrigger ("fadeOut");
-					}
-				}
-			}
-			//Arrow keys	
-			if (Input.GetButtonDown("LeftButton"))
-			{
-				leftTutorialAnim.SetTrigger ("fadeOut");
-				leftSet = true;
-			}
-			if (Input.GetButtonDown("RightButton"))
-			{
-				rightTutorialAnim.SetTrigger ("fadeOut");
-				rightSet = true;
-			}
+            if (tutorial_ready)
+            {
+                foreach (Touch touch in Input.touches)
+                {
+                    if (touch.phase == TouchPhase.Ended)
+                    {
+                        //Left Touch
+                        if (touch.position.x < Screen.width / 2f)
+                        {
+                            leftSet = true;
+                            leftTutorialAnim.SetTrigger("fadeOut");
+                        }
+                        //Right Touch
+                        else
+                        {
+                            rightSet = true;
+                            rightTutorialAnim.SetTrigger("fadeOut");
+                        }
+                    }
+                }
+                //Arrow keys	
+                if (Input.GetButtonDown("LeftButton"))
+                {
+                    leftTutorialAnim.SetTrigger("fadeOut");
+                    leftSet = true;
+                }
+                if (Input.GetButtonDown("RightButton"))
+                {
+                    rightTutorialAnim.SetTrigger("fadeOut");
+                    rightSet = true;
+                }
 
-			if(rightSet && leftSet){
-				rightSet = false;
-				leftSet = false;
-				Invoke ("StartGame", leftTutorialAnim.GetCurrentAnimatorClipInfo(0).Length);
-			}
+                if (rightSet && leftSet)
+                {
+                    rightSet = false;
+                    leftSet = false;
+                    Invoke("StartGame", leftTutorialAnim.GetCurrentAnimatorClipInfo(0).Length);
+                }
+            }
+            else
+            {
+                if (Input.touchCount == 0)
+                {
+                    tutorial_ready = true;
+                }
+            }
+
+           
 		}
 	}
 
@@ -192,7 +210,8 @@ public class UImanager : MonoBehaviour {
 	
     // soft only resets the variables, but hard resets the platform
 	public void ResetGame(bool soft){
-		finalAge = 0;
+        tutorial_ready = false;
+        finalAge = 0;
 		playerStats.age = 0;
 		playerStats.health = 100;
         playerStats.reset();
