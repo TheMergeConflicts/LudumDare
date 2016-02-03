@@ -89,7 +89,7 @@ public class PlatformManagement : MonoBehaviour {
 
 	void UpdateMobileInput(){
 		foreach(Touch touch in Input.touches){
-			if(touch.phase == TouchPhase.Ended){
+			if(touch.phase == TouchPhase.Began){
 				//Left Touch
 				if (touch.position.x < Screen.width / 2f) {
 					moveRope(LEFT);
