@@ -32,7 +32,7 @@ public class FallDamage : MonoBehaviour {
         }
     }
 
-    void OnCollisionExit2D(Collision2D collider)
+    void OnCollisionStay2D(Collision2D collider)
     {
         positionBeforeFall = transform.position;
     }
