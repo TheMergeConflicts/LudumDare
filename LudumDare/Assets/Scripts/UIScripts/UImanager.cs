@@ -15,6 +15,8 @@ public class UImanager : MonoBehaviour {
     public GameObject blackCoverPanel;
     public GameObject endPanel;
     public GameObject ComboUI;
+    public GameObject blackCover_mainMenu;
+
 
     public MinionSpawner minionSpawner;
     public PlatformManagement platformManagement;
@@ -206,6 +208,17 @@ public class UImanager : MonoBehaviour {
 
 	public void SetCreditsUI(bool state){
 		creditsPanel.SetActive (state);
+        Animator blackCover_mainMenu_am = blackCover_mainMenu.GetComponent<Animator>();
+        if (state)
+        {
+            blackCover_mainMenu_am.SetTrigger("fadeIn");
+
+        }
+        else
+        {
+            blackCover_mainMenu_am.SetTrigger("fadeOut");
+
+        }
 	}
 	
     // soft only resets the variables, but hard resets the platform
