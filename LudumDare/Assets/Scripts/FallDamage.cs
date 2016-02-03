@@ -53,6 +53,7 @@ public class FallDamage : MonoBehaviour {
             sManager.setRandomPitch();
             sManager.setRandomVolume();
             sManager.playSound();
+            Physics2D.IgnoreCollision(collider.collider, GetComponent<Collider2D>());
 
         }
     }

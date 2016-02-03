@@ -1530,6 +1530,10 @@ Prefab:
       propertyPath: spawnPlatform
       value: 
       objectReference: {fileID: 1803789517}
+    - target: {fileID: 100210, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
+      propertyPath: m_Name
+      value: GreenSpawner
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
   m_IsPrefabParent: 0
@@ -3202,6 +3206,10 @@ Prefab:
       propertyPath: spawnPlatform
       value: 
       objectReference: {fileID: 1153341456}
+    - target: {fileID: 100210, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
+      propertyPath: m_Name
+      value: RedSpawner
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
   m_IsPrefabParent: 0
@@ -5457,6 +5465,10 @@ Prefab:
       propertyPath: spawnPlatform
       value: 
       objectReference: {fileID: 2020629148}
+    - target: {fileID: 100210, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
+      propertyPath: m_Name
+      value: YellowSpawner
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
   m_IsPrefabParent: 0
@@ -6817,7 +6829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rollStack: 2
-  balanceScale: 0.05
+  balanceScale: 0.95
 --- !u!4 &1551502241 stripped
 Transform:
   m_PrefabParentObject: {fileID: 447342, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
@@ -9293,6 +9305,10 @@ Prefab:
       propertyPath: spawnPlatform
       value: 
       objectReference: {fileID: 2054928937}
+    - target: {fileID: 100210, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
+      propertyPath: m_Name
+      value: BlueSpawner
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16c8568aa01184c469dbee7a77116a52, type: 2}
   m_IsPrefabParent: 0

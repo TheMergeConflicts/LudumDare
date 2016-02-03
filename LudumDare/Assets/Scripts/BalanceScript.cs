@@ -5,8 +5,8 @@ using System.Collections;
 public class BalanceScript : MonoBehaviour {
     public const int RED = 0;
     public const int GREEN = 1;
-    public const int BLUE = 2;
-    public const int YELLOW = 3;
+    public const int YELLOW = 2;
+    public const int BLUE = 3;
 
     public int rollStack = 10;
 
@@ -16,6 +16,8 @@ public class BalanceScript : MonoBehaviour {
     int currentRollPosition;
 
     float[] spawnWeights = new float[8];
+
+    string[] colorNames = { "Red", "Green", "Yellow", "Blue" };
     
 
 
@@ -45,6 +47,7 @@ public class BalanceScript : MonoBehaviour {
             }
             min = max;
         }
+       // print(previousRolls[currentRollPosition] + " " + colorNames[convertRollToMinionColor(previousRolls[currentRollPosition])]);
         balanceWeights();
     }
 
@@ -91,8 +94,16 @@ public class BalanceScript : MonoBehaviour {
         {
             scaleMinionColorWeight(getAdjacentColor(i), 1 - (colorFreq[i] * balanceScale));
         }
-        spawnWeights = normalizeWeights(spawnWeights);
+
+        int j = 0;
         
+        spawnWeights = normalizeWeights(spawnWeights);
+        /*foreach (float spwn in spawnWeights)
+        {
+            print(colorNames[convertRollToMinionColor(j)] + "   " + spwn);
+            j++;
+        }*/
+
     }
 
     public int getLastSpawnPosition()
