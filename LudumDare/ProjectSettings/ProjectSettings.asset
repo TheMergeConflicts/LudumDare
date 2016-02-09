@@ -173,7 +173,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 0fb01715c7298fd4ca79cb29a8155764, type: 3}
+      m_Icon: {fileID: 2800000, guid: 19b7f4adc9d175447a2587747dfe60d4, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []
@@ -330,7 +330,8 @@ PlayerSettings:
   psp2InfoBarColor: 0
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    4: 
   metroPackageName: LudumDare
   metroPackageVersion: 
   metroCertificatePath: 

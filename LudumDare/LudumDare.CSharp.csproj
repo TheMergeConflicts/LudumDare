@@ -69,10 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HighScore.cs" />
-    <Compile Include="Assets\InGamePause.cs" />
-    <Compile Include="Assets\IngameMute.cs" />
-    <Compile Include="Assets\PlatformChecker.cs" />
     <Compile Include="Assets\Scripts\AcidSoundPlayer.cs" />
     <Compile Include="Assets\Scripts\BalanceScript.cs" />
     <Compile Include="Assets\Scripts\BubblePop.cs" />
@@ -81,10 +77,14 @@
     <Compile Include="Assets\Scripts\Destroyer.cs" />
     <Compile Include="Assets\Scripts\DyingSoundScript.cs" />
     <Compile Include="Assets\Scripts\FallDamage.cs" />
+    <Compile Include="Assets\Scripts\HighScore.cs" />
+    <Compile Include="Assets\Scripts\InGamePause.cs" />
+    <Compile Include="Assets\Scripts\IngameMute.cs" />
     <Compile Include="Assets\Scripts\MinionAcidLogic.cs" />
     <Compile Include="Assets\Scripts\MinionMovement.cs" />
     <Compile Include="Assets\Scripts\MinionSpawner.cs" />
     <Compile Include="Assets\Scripts\MinionStats.cs" />
+    <Compile Include="Assets\Scripts\PlatformChecker.cs" />
     <Compile Include="Assets\Scripts\PlatformManagement.cs" />
     <Compile Include="Assets\Scripts\PlatformReset.cs" />
     <Compile Include="Assets\Scripts\PlatformScoring.cs" />
