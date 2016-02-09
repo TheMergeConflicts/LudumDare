@@ -50,4 +50,9 @@ public class PlayerHealthUI : MonoBehaviour {
 			}
 		}
 	}
+
+    public void EndAnimation()
+    {
+        HealthUIAnimator.SetTrigger("EndAnimation");
+    }
 }

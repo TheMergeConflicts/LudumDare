@@ -7,6 +7,8 @@ public class ComboMultiplier : MonoBehaviour {
     public const int comboBreakLow = 2;
     public const int comboBreakHigh = 3;
 
+    public int highestCombo;
+
     public int multiplierScale = 1;
     public int maxMultiplierScale = 4;
     public int ticksToNextMultiplier = 5;
@@ -23,6 +25,7 @@ public class ComboMultiplier : MonoBehaviour {
 
     void Start()
     {
+        highestCombo = 0;
         resetMultiplier();
         comboSounds = GetComponentInChildren<SoundManager>();
         //cUIManager = GameObject.FindObjectOfType<ComboUIManager>();
@@ -37,6 +40,11 @@ public class ComboMultiplier : MonoBehaviour {
         if (ticks >= ticksToNextMultiplier)
         {
             increaseMultiplierScale();
+        }
+
+        if (totalStreak > highestCombo)
+        {
+            highestCombo = totalStreak;
         }
     }
 
@@ -82,6 +90,7 @@ public class ComboMultiplier : MonoBehaviour {
 
     public void resetMultiplier()
     {
+        
         playComboBreakSound();
         multiplierScale = 1;
         ticks = 0;

@@ -341,7 +341,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1.5
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -895,7 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f5cd7b3f61a3458ccba08a71d71a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lethalHeight: 5.8
+  lethalHeight: 6.1
   positionBeforeFall: {x: 0, y: 0, z: 0}
   timeBeforeDestroy: 3
   sManager: {fileID: 11441582}
@@ -1067,7 +1067,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: lethalHeight
-      value: 5.8
+      value: 6.1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsActive
@@ -1080,6 +1080,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: jumpForce
       value: 310
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -6,6 +6,10 @@ public class PlayerStats : MonoBehaviour {
     public float health;
     public float yearTime = 5;
 
+    public int historyHighAge;
+    public int historyHighCombo;
+
+    public ComboMultiplier comboManager;
 	public UImanager UImanager;
     
 
@@ -17,6 +21,8 @@ public class PlayerStats : MonoBehaviour {
 
     void Start()
     {
+        historyHighAge = PlayerPrefs.GetInt("HighestAge");
+        historyHighCombo = PlayerPrefs.GetInt("HighestCombo");
         this.maxHealth = this.health;
         ageTimer = yearTime;
         spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<MinionSpawner>();
@@ -40,8 +46,21 @@ public class PlayerStats : MonoBehaviour {
 
 
 		if(health <= 0f && UImanager.currentState == UImanager.UIState.inGame){
+
+            if (age > historyHighAge)
+            {
+                historyHighAge = age;
+                PlayerPrefs.SetInt("HighestAge", historyHighAge);
+            }
+            if (comboManager.highestCombo > historyHighCombo)
+            {
+                historyHighCombo = comboManager.highestCombo;
+                PlayerPrefs.SetInt("HighestCombo", historyHighCombo);
+            }
+
 			UImanager.finalAge = age;
 			UImanager.StartEndAnimation ();
+
 		}
     }
 

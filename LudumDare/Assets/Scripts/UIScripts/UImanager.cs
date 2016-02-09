@@ -17,6 +17,8 @@ public class UImanager : MonoBehaviour {
     public GameObject ComboUI;
     public GameObject blackCover_mainMenu;
 
+    public Text HistoryHighAge;
+    public Text HistoryHighCombo;
 
     public MinionSpawner minionSpawner;
     public PlatformManagement platformManagement;
@@ -25,7 +27,9 @@ public class UImanager : MonoBehaviour {
 
     public Animator healthBarAnim;
 
+    public PlayerHealthUI playerHealthUI;
 
+    public InGamePause ingamePause;
 
 	public int finalAge;
 
@@ -187,12 +191,16 @@ public class UImanager : MonoBehaviour {
 
 	public void StartEndGame(){
 		finalResult.text = "You survived to age" + "\n" + "<size=50>" + finalAge + "</size>";
-		currentState = UIState.endScreen;
+        HistoryHighAge.text = "Record high AGE: " + "<size=25>" + playerStats.historyHighAge + "</size>";
+        HistoryHighCombo.text = "Record high COMBO: " + "<size=25>" + playerStats.historyHighCombo + "</size>";
+
+        currentState = UIState.endScreen;
     }
 
     public void StartEndAnimation()
     {
 
+        playerHealthUI.EndAnimation();
         currentState = UIState.endAnimation;
         Invoke("StartEndGame", 2f);
     }
@@ -237,4 +245,5 @@ public class UImanager : MonoBehaviour {
 			Destroy (minion);
 		}
 	}
+
 }

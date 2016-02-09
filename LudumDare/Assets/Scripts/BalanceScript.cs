@@ -18,8 +18,8 @@ public class BalanceScript : MonoBehaviour {
     float[] spawnWeights = new float[8];
 
     string[] colorNames = { "Red", "Green", "Yellow", "Blue" };
-    
 
+    bool locked;
 
     void Start()
     {
@@ -34,6 +34,7 @@ public class BalanceScript : MonoBehaviour {
 
     public void rollChance()
     {
+
         float randChance = Random.Range(0f, 1f);
         float min = 0;
         float max = 0;
@@ -108,6 +109,7 @@ public class BalanceScript : MonoBehaviour {
 
     public int getLastSpawnPosition()
     {
+        //Debug.Log(previousRolls[currentRollPosition] / 2);
         return previousRolls[currentRollPosition] / 2;
     }
 
@@ -206,6 +208,24 @@ public class BalanceScript : MonoBehaviour {
             colorFreq[i] /= length;   
         }
         return colorFreq;
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="index">The platform number</param>
+    public void LockSpawner(int index)
+    {
+        //Needs to find the correct elements based on the spawner number
+        spawnWeights[index * 2] = 0;
+        spawnWeights[index * 2 + 1] = 0;
+        //locked = true;
+    }
+
+    public void UnlockSpawner()
+    {
+        locked = false;
     }
 
 }

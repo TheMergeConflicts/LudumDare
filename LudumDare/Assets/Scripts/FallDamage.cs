@@ -30,6 +30,7 @@ public class FallDamage : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        //Debug.DrawLine(transform.position, transform.position + new Vector3(0, -lethalHeight));
     }
 
     void OnCollisionStay2D(Collision2D collider)

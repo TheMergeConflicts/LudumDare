@@ -9,6 +9,8 @@ public class MinionMovement : MonoBehaviour {
     public AudioClip[] boneSounds = new AudioClip[4];
     public AudioClip[] currentClips;
 
+    public UImanager UImanager;
+
     Rigidbody2D rigid;
     MinionStats stats;
     bool inAir;
@@ -19,6 +21,7 @@ public class MinionMovement : MonoBehaviour {
 
     void Start()
     {
+        UImanager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UImanager>();
         stats = GetComponent<MinionStats>();
         rigid = GetComponent<Rigidbody2D>();
         aSource = GetComponent<AudioSource>();
@@ -40,22 +43,28 @@ public class MinionMovement : MonoBehaviour {
 
     void checkMinionStuck()
     {
-        if (Mathf.Abs(previousPosition.x - transform.position.x) < .01f)
+        if (!UImanager.ingamePause.ingamePaused)
         {
-            previousCount++;
-        }
-        else
-        {
-            previousCount = 0;
+            if (Mathf.Abs(previousPosition.x - transform.position.x) < .01f)
+            {
+                previousCount++;
+            }
+            else
+            {
+                previousCount = 0;
+            }
+
+            if (previousCount > 60)
+            {
+                jump();
+                previousCount = 0;
+            }
+
+            previousPosition = transform.position;
+
         }
 
-        if (previousCount > 60)
-        {
-            jump();
-            previousCount = 0;
-        }
-
-        previousPosition = transform.position;
+        
     }
 
     void platformJump()

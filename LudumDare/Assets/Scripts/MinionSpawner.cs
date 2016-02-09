@@ -45,6 +45,7 @@ public class MinionSpawner : MonoBehaviour {
     {
         balanceScript.rollChance();
         SpawnStats sStats = spawners[balanceScript.getLastSpawnPosition()];
+
         GameObject obj = (GameObject)Instantiate(minions[Random.Range(0, minions.Length)], sStats.transform.position, new Quaternion());
         MinionStats mStats = obj.GetComponent<MinionStats>();
         mStats.direction = sStats.direction;
