@@ -30,11 +30,13 @@ public class IngameMute : MonoBehaviour {
         if (ingameMuted)
         {
             audioListener.enabled = false;
+            AudioListener.volume = 0;
             image.sprite = muted;
         }
         else
         {
             audioListener.enabled = true;
+            AudioListener.volume = 100;
             image.sprite = soundOn;
         }
     }
